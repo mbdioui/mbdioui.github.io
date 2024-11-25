@@ -1,0 +1,215 @@
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f0f0;
+}
+
+header {
+  background: linear-gradient(135deg, #3498db, #8e44ad); /* Dégradé bleu */
+  padding: 50px 15px;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #e74c3c;
+}
+
+.section {
+  padding: 50px;
+  margin: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: none;
+}
+
+footer {
+  text-align: center;
+   padding: 50px 15px;
+  background: linear-gradient(135deg, #3498db, #8e44ad); /* Dégradé bleu */
+  color: white;
+}
+#projects {
+  padding: 50px;
+  background: linear-gradient(135deg, #3498db, #8e44ad); /* Dégradé bleu */
+  text-align: center;
+  color: white;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+}
+
+/* Reste du code pour la grille et les cartes des projets */
+
+
+/* Grille des projets */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+/* Carte de projet */
+.project-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out;
+}
+
+.project-card:hover {
+  transform: scale(1.05); /* Effet d'agrandissement au survol */
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 20px;
+  text-align: left;
+}
+
+.project-info h3 {
+  font-size: 1.5rem;
+  color: #34495e;
+}
+
+.project-info p {
+  font-size: 1rem;
+  color: #7f8c8d;
+  margin-bottom: 10px;
+}
+
+.view-more {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.view-more:hover {
+  text-decoration: underline;
+}
+
+#contact {
+  padding: 50px 15px;
+  background: linear-gradient(135deg, #3498db, #8e44ad); /* Dégradé bleu */
+  color: white;
+  text-align: center;
+}
+
+#contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-info p {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.contact-info a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+/* Formulaire de contact */
+.contact-form h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    max-width: 500px; /* Limite la largeur maximale */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    box-sizing: border-box; /* Inclut le padding dans la largeur totale */
+}
+
+.contact-form textarea {
+    height: 150px; /* Ajuste la hauteur du textarea */
+}
+
+.contact-form button {
+  background-color: #fff;
+  color: #3498db;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: #3498db;
+  color: white;
+}
+
+
+/* Pour les petits écrans (mobiles) */
+@media (max-width: 768px) {
+  #projects {
+      padding: 30px 15px;
+  }
+
+  .project-grid {
+      grid-template-columns: 1fr; /* Une seule colonne sur mobile */
+  }
+
+  .project-info {
+      padding: 15px; /* Réduit les espaces sur mobile */
+  }
+
+  .project-card img {
+      height: 150px; /* Ajuste la taille des images sur mobile */
+  }
+
+  nav ul {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+}
+
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+  #projects h2 {
+      font-size: 2rem; /* Plus petit titre */
+  }
+
+  .view-more {
+      font-size: 0.9rem;
+  }
+}
