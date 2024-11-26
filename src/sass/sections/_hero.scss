@@ -66,3 +66,17 @@
     }
   }
 }
+
+.flags {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.flags img {
+  width: 30px; /* Réduit la taille */
+  height: auto;
+  margin-left: 10px; /* Espacement entre drapeaux */
+  cursor: pointer;
+}
+
