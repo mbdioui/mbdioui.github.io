@@ -13,7 +13,7 @@
   left: 0;
   bottom: 0;
   right: 0;
-  z-index: -1;
+  z-index: 1;
 
   // Set position sticky so the jumbotron stays fixed while you scroll.
   // position: sticky;
@@ -79,4 +79,14 @@
   margin-left: 10px; /* Espacement entre drapeaux */
   cursor: pointer;
 }
-
+#hero .fa-android {
+  font-size: 4rem; /* Ajustez la taille de l'icône */
+  color: $dark-blue-text; /* Utilisez la couleur appropriée */
+  position: sticky;
+  margin-left: 20px;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  font-size: 5rem; /* Augmentez la taille de l'icône si nécessaire */
+  display: inline-block; /* Assurez-vous que l'élément n'est pas masqué */
+  opacity: 1; 
+}
