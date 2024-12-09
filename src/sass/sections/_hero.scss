@@ -81,11 +81,10 @@
 }
 #hero .fa-android {
   font-size: 4rem; /* Ajustez la taille de l'icône */
-  color: $dark-blue-text; /* Utilisez la couleur appropriée */
-  position: sticky;
-  margin-left: 20px;
-  left: 50%;
-  transform: translate(-50%, -50%); 
+  color: $secondary-color; /* Utilisez la couleur appropriée */
+  vertical-align: top;
+  margin-left: 20px; 
+  transform: translate(-30%,-10%);
   font-size: 5rem; /* Augmentez la taille de l'icône si nécessaire */
   display: inline-block; /* Assurez-vous que l'élément n'est pas masqué */
   opacity: 1; 
