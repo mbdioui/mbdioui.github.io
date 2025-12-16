@@ -64,4 +64,25 @@ export const targetElements = [
       origin: "bottom",
     },
   },
+  {
+    element: ".skills-wrapper",
+    animation: {
+      delay: 800,
+      origin: "bottom",
+    },
+  },
+  {
+    element: ".project-detail-wrapper__info",
+    animation: {
+      delay: 600,
+      origin: "bottom",
+    },
+  },
+  {
+    element: ".project-detail-wrapper__image",
+    animation: {
+      delay: 800,
+      origin: "bottom",
+    },
+  },
 ];

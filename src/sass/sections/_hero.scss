@@ -28,6 +28,38 @@
     padding: 0rem $default-font-size;
   }
 
+  &.hero-elis {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./assets/elis-bg.png");
+    background-position: center;
+    background-size: cover;
+    color: $white-color;
+
+    .hero-title,
+    .hero-cta a {
+      color: $white-color;
+    }
+
+    .text-color-main {
+      color: $white-color !important;
+    }
+  }
+
+  &.hero-saffelo {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./assets/saffelo-bg.png");
+    background-position: center;
+    background-size: cover;
+    color: $white-color;
+
+    .hero-title,
+    .hero-cta a {
+      color: $white-color;
+    }
+
+    .text-color-main {
+      color: $white-color !important;
+    }
+  }
+
   .hero-title {
     font-size: 5.6rem;
     font-weight: 700;
@@ -37,14 +69,17 @@
     @include respond(tab-land) {
       font-size: 4rem;
     }
+
     @include respond(tab-port) {
       font-size: 3.6rem;
       text-align: center;
     }
+
     @include respond(phone) {
       font-size: 3.5rem;
       line-height: 1.5;
     }
+
     @include respond(phone-xs) {
       font-size: 2.8rem;
     }
@@ -74,18 +109,25 @@
 }
 
 .flags img {
-  width: 30px; /* Réduit la taille */
+  width: 30px;
+  /* Réduit la taille */
   height: auto;
-  margin-left: 10px; /* Espacement entre drapeaux */
+  margin-left: 10px;
+  /* Espacement entre drapeaux */
   cursor: pointer;
 }
+
 #hero .fa-android {
-  font-size: 4rem; /* Ajustez la taille de l'icône */
-  color: $secondary-color; /* Utilisez la couleur appropriée */
+  font-size: 4rem;
+  /* Ajustez la taille de l'icône */
+  color: $secondary-color;
+  /* Utilisez la couleur appropriée */
   vertical-align: top;
-  margin-left: 20px; 
-  transform: translate(-30%,-10%);
-  font-size: 5rem; /* Augmentez la taille de l'icône si nécessaire */
-  display: inline-block; /* Assurez-vous que l'élément n'est pas masqué */
-  opacity: 1; 
+  margin-left: 20px;
+  transform: translate(-30%, -10%);
+  font-size: 5rem;
+  /* Augmentez la taille de l'icône si nécessaire */
+  display: inline-block;
+  /* Assurez-vous que l'élément n'est pas masqué */
+  opacity: 1;
 }
