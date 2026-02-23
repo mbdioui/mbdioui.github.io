@@ -60,6 +60,38 @@
     }
   }
 
+  &.hero-bein {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./assets/bein-bg.png");
+    background-position: center;
+    background-size: cover;
+    color: $white-color;
+
+    .hero-title,
+    .hero-cta a {
+      color: $white-color;
+    }
+
+    .text-color-main {
+      color: $white-color !important;
+    }
+  }
+
+  &.hero-ratp {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./assets/ratp-bg.png");
+    background-position: center;
+    background-size: cover;
+    color: $white-color;
+
+    .hero-title,
+    .hero-cta a {
+      color: $white-color;
+    }
+
+    .text-color-main {
+      color: $white-color !important;
+    }
+  }
+
   .hero-title {
     font-size: 5.6rem;
     font-weight: 700;

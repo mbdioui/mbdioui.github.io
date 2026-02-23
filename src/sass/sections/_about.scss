@@ -77,3 +77,175 @@
     }
   }
 }
+
+#experience {
+  background-color: $white-color;
+  color: $dark-blue-text;
+  padding: 5rem 0;
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: bold;
+    color: $dark-blue-text;
+  }
+
+  .experience-wrapper {
+    .experience-block {
+      background: $light-grey;
+      border-radius: 15px;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+      &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+      }
+
+      h3 {
+        color: $dark-blue-text;
+        font-weight: 600;
+        margin-bottom: 0.5rem;
+        font-size: 2rem;
+      }
+
+      .experience-date {
+        color: $secondary-color;
+        font-weight: 500;
+        margin-bottom: 1rem;
+        font-size: 1.4rem;
+      }
+
+      p {
+        color: $dark-grey;
+        line-height: 1.8;
+        font-size: 1.5rem;
+
+        strong {
+          color: $dark-blue-text;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  @include respond(phone) {
+    padding: 3rem 0;
+
+    .experience-block {
+      padding: 1.5rem;
+
+      h3 {
+        font-size: 1.6rem;
+      }
+
+      .experience-date {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 1.3rem;
+      }
+    }
+  }
+}
+
+.skills-summary-section {
+  background-color: $primary-color;
+  background-image: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+  color: $white-color;
+  padding: 5rem 0;
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 3rem;
+    font-weight: bold;
+    color: $white-color;
+  }
+
+  .skills-summary-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    @include respond(tab-land) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+
+    @include respond(table-port) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .skills-summary-row {
+    display: flex;
+    gap: 2rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+  }
+
+  .skills-summary-category {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+
+    h4 {
+      font-size: 1.6rem;
+      margin-bottom: 1.5rem;
+      color: $white-color;
+      border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      padding-bottom: 0.8rem;
+    }
+
+    .skills-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .tag {
+      background: rgba(255, 255, 255, 0.2);
+      color: $white-color;
+      padding: 0.5rem 1.2rem;
+      border-radius: 50px;
+      font-size: 1.3rem;
+      font-weight: 500;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: translateY(-2px);
+      }
+    }
+  }
+
+  @include respond(phone) {
+    padding: 3rem 0;
+
+    .skills-summary-wrapper {
+      gap: 1.5rem;
+    }
+
+    .skills-summary-category {
+      padding: 1.5rem;
+
+      h4 {
+        font-size: 1.4rem;
+      }
+
+      .tag {
+        font-size: 1.1rem;
+        padding: 0.4rem 1rem;
+      }
+    }
+  }
+}
