@@ -186,4 +186,38 @@
       top: 56px;
     }
   }
+
+  // --- Language switcher ---
+  .navbar__lang {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .navbar__flag {
+    width: 24px;
+    height: auto;
+    border-radius: 3px;
+    display: block;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+  }
+
+  .navbar__lang-link {
+    opacity: 0.45;
+    text-decoration: none !important;
+
+    &:hover {
+      opacity: 1;
+      transform: scale(1.1);
+      text-decoration: none !important;
+    }
+
+    &--active {
+      opacity: 1;
+
+      .navbar__flag {
+        box-shadow: 0 0 0 2px $primary-color;
+      }
+    }
+  }
 }
