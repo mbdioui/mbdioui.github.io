@@ -109,6 +109,11 @@
         font-weight: 600;
         margin-bottom: 0.5rem;
         font-size: 2rem;
+
+        .experience-company {
+          color: $secondary-color;
+          font-weight: 700;
+        }
       }
 
       .experience-date {
@@ -131,6 +136,21 @@
     }
   }
 
+  // Grid layout for 2 columns on wider screens
+  @include respond(tab-land) {
+    .experience-wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+  }
+
+  @include respond(tab-port) {
+    .experience-wrapper {
+      grid-template-columns: 1fr;
+    }
+  }
+
   @include respond(phone) {
     padding: 3rem 0;
 
@@ -148,6 +168,49 @@
       p {
         font-size: 1.3rem;
       }
+    }
+  }
+}
+
+// Stats bar shown inside the about section
+.stats-bar {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 3.2rem;
+  flex-wrap: wrap;
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  &__number {
+    font-size: 3.2rem;
+    font-weight: 800;
+    color: $white-color;
+    line-height: 1;
+  }
+
+  &__label {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+
+  @include respond(phone) {
+    gap: 2.4rem;
+
+    &__number {
+      font-size: 2.6rem;
+    }
+
+    &__label {
+      font-size: 1.1rem;
     }
   }
 }

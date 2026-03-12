@@ -58,6 +58,20 @@ export const targetElements = [
     },
   },
   {
+    element: ".experience-block",
+    animation: {
+      delay: 400,
+      origin: "bottom",
+    },
+  },
+  {
+    element: ".stats-bar",
+    animation: {
+      delay: 600,
+      origin: "bottom",
+    },
+  },
+  {
     element: ".contact-wrapper",
     animation: {
       delay: 800,
