@@ -1,0 +1,189 @@
+#navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: 70px;
+  background: transparent;
+  transition: background 0.4s ease, box-shadow 0.4s ease;
+
+  &.scrolled {
+    background: $white-color;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2.4rem;
+  }
+
+  .navbar__logo {
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: $dark-blue-text;
+    text-decoration: none !important;
+    letter-spacing: -1px;
+    line-height: 1;
+
+    span {
+      color: $primary-color;
+    }
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+
+  .navbar__links {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 3.2rem;
+  }
+
+  .navbar__link {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: $dark-grey;
+    text-decoration: none !important;
+    position: relative;
+    transition: color 0.2s ease;
+    white-space: nowrap;
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(135deg, $primary-color 0%, $secondary-color 100%);
+      border-radius: 2px;
+      transition: width 0.3s ease;
+    }
+
+    &:hover {
+      color: $secondary-color;
+      text-decoration: none !important;
+
+      &::after {
+        width: 100%;
+      }
+    }
+
+    &.active {
+      color: $secondary-color;
+
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+
+  .navbar__cta {
+    font-size: 1.4rem !important;
+    padding: 0.7rem 2rem !important;
+    line-height: 1.4 !important;
+    white-space: nowrap;
+  }
+
+  // --- Hamburger Toggle ---
+  .navbar__toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+    gap: 5px;
+    padding: 8px;
+    z-index: 1100;
+
+    span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: $dark-blue-text;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+
+    &.active {
+      span:nth-child(1) {
+        transform: translateY(7px) rotate(45deg);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+        transform: scaleX(0);
+      }
+
+      span:nth-child(3) {
+        transform: translateY(-7px) rotate(-45deg);
+      }
+    }
+  }
+
+  // --- Responsive ---
+  @include respond(tab-port) {
+    height: 60px;
+
+    .navbar__toggle {
+      display: flex;
+    }
+
+    .navbar__links {
+      position: fixed;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background: $white-color;
+      flex-direction: column;
+      align-items: center;
+      padding: 2.4rem 2rem 3rem;
+      gap: 2.4rem;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+      transform: translateY(-110%);
+      opacity: 0;
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+        opacity 0.35s ease;
+      pointer-events: none;
+      z-index: 999;
+
+      &.open {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: all;
+      }
+    }
+
+    .navbar__link {
+      font-size: 1.8rem;
+    }
+
+    .navbar__cta {
+      font-size: 1.6rem !important;
+    }
+  }
+
+  @include respond(phone) {
+    height: 56px;
+
+    .navbar__logo {
+      font-size: 2rem;
+    }
+
+    .navbar__links {
+      top: 56px;
+    }
+  }
+}

@@ -7,28 +7,46 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
 
-  <!-- Todo: put here your site title -->
-  <title>Mohamed BDIOUI | Android Expert</title>
-  <!-- Todo: add some coding keywords below - e.g: (javascript, yourusername, etc) -->
-  <meta name="keywords" content="jetpack, Kotlin, Java, Android, MVVM, Room database" />
-  <!-- Todo: improve your SEO by adding a small description of you -->
-  <meta name="description" content="Mohamed BDIOUI|Android Developer " />
+  <title>Mohamed BDIOUI | Senior Android Developer</title>
+  <meta name="keywords" content="Android, Kotlin, Java, Jetpack Compose, MVVM, Clean Architecture, Mobile Developer, React Native" />
+  <meta name="description" content="Mohamed BDIOUI — Senior Android Developer with 6+ years of experience building robust, user-centric mobile applications." />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="styles.scss" />
   <script defer src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
-
-  <!-- Todo: remove the below script once you finish your portfolio -->
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
 </head>
 
-<!-- Todo: read the following HTML Todos to create your stunning portfolio website -->
-
 <body>
   <div id="top"></div>
 
+  <!-- **** Navbar **** -->
+  <nav id="navbar">
+    <div class="navbar__container">
+      <a href="#top" class="navbar__logo">MB<span>.</span></a>
 
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#about" class="navbar__link">About</a></li>
+        <li><a href="#experience" class="navbar__link">Experience</a></li>
+        <li><a href="#skills" class="navbar__link">Skills</a></li>
+        <li><a href="#projects" class="navbar__link">Projects</a></li>
+        <li><a href="#contact" class="navbar__link">Contact</a></li>
+        <li>
+          <a rel="noreferrer" href="assets/resume.pdf" target="_blank" class="cta-btn cta-btn--hero navbar__cta">
+            Resume
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- /END Navbar -->
 
   <!-- **** Hero Section **** -->
   <section id="hero" class="jumbotron">
@@ -38,15 +56,19 @@
         <a href="index.html"><img src="assets/fr-flag.png" alt="Français"></a>
       </div>
       <h1 class="hero-title load-hidden">
-        Hi, my name is <span class="text-color-main">Mohamed BDIOUI</span>
+        Hi, I'm <span class="text-color-main">Mohamed BDIOUI</span>
         <br />
-        I'm a Senior Android Developer. <a class="hero-title load-hidden" rel="noreferrer" target="_blank">
+        Senior Android Developer —
+        <br />
+        Building impactful mobile experiences.
+        <a class="hero-title load-hidden" rel="noreferrer" target="_blank">
           <i class="fa fa-android fa-inverse"></i>
         </a>
       </h1>
-      <p class="hero-cta load-hidden">
+      <div class="hero-cta load-hidden">
         <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about">Know more</a>
-      </p>
+        <a rel="noreferrer" class="cta-btn cta-btn--hero" href="assets/resume.pdf" target="_blank">View Resume</a>
+      </div>
     </div>
   </section>
   <!-- /END Hero Section -->
@@ -59,7 +81,7 @@
         <div class="col-md-6 col-sm-12">
           <div class="about-wrapper__image load-hidden">
             <img alt="Profile Image" class="img-fluid rounded shadow-lg" height="auto" width="300px"
-              src="assets/profile.png" alt="Profile Image" />
+              src="assets/profile.png" />
           </div>
         </div>
         <div class="col-md-6 col-sm-12">
@@ -68,15 +90,26 @@
               Passionate about Android development since 2018, I relentlessly explore new technologies with insatiable
               curiosity and a constant drive to innovate. My diverse journey has shaped a creative and unique approach
               to each project, blending technical expertise with strategic vision.
-              </br></br>Proficient in Java and Kotlin, I’ve built robust, user-centric mobile applications aligned with
+              </br></br>Proficient in Java and Kotlin, I've built robust, user-centric mobile applications aligned with
               industry best practices. In agile environments, I thrive in collaborative settings, leveraging strong
               communication and interpersonal skills to make an impact.
-              </br></br>Always seeking new challenges, I’m eager to connect and discuss exciting projects. If you’re
-              looking for an Android developer ready to push the boundaries of innovation, let’s talk!
+              </br></br>Always seeking new challenges, I'm eager to connect and discuss exciting projects. If you're
+              looking for an Android developer ready to push the boundaries of innovation, let's talk!
             </p>
-            <p class="about-wrapper__info-text">
-              My Goal is to Help People do Usefull things with Apps.
-            </p>
+            <div class="stats-bar load-hidden">
+              <div class="stats-bar__item">
+                <span class="stats-bar__number">6+</span>
+                <span class="stats-bar__label">Years Exp.</span>
+              </div>
+              <div class="stats-bar__item">
+                <span class="stats-bar__number">4+</span>
+                <span class="stats-bar__label">Major Apps</span>
+              </div>
+              <div class="stats-bar__item">
+                <span class="stats-bar__number">2</span>
+                <span class="stats-bar__label">Platforms</span>
+              </div>
+            </div>
             <span class="d-flex mt-3">
               <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="assets/resume.pdf?v=2">
                 View Resume
@@ -87,7 +120,67 @@
       </div>
     </div>
   </section>
+  <!-- /END About Section -->
 
+  <!-- **** Experience Section **** -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title load-hidden">Experience</h2>
+      <div class="experience-wrapper">
+
+        <div class="experience-block load-hidden">
+          <h3>Senior Android Developer <span class="experience-company">@ Elis</span></h3>
+          <p class="experience-date">2022 – Present</p>
+          <p>
+            Native Android application for <strong>logistics and traceability</strong> at Elis.
+            Integrated <strong>HereWeGo Maps</strong> for route optimization and ETA calculation,
+            implemented <strong>NFC/RFID</strong> (UHF, HF, 2D, QR) inventory management
+            compatible with Zebra and Chainway industrial PDAs, and fully digitalized
+            field business processes including proof-of-visit workflows.
+          </p>
+        </div>
+
+        <div class="experience-block load-hidden">
+          <h3>Android TV Developer <span class="experience-company">@ SFR</span></h3>
+          <p class="experience-date">2021 – 2022</p>
+          <p>
+            Developed the official <strong>SFR Gen8TV</strong> box application for Android TV.
+            Built TV program schedule listings, video stream controls (live &amp; fast-forward),
+            and custom UI components for a seamless television experience.
+            Worked in an <strong>Agile Scrum</strong> team following
+            <strong>Clean Architecture</strong> and MVVM patterns.
+          </p>
+        </div>
+
+        <div class="experience-block load-hidden">
+          <h3>Android Developer <span class="experience-company">@ Saffelo</span></h3>
+          <p class="experience-date">2020 – 2021</p>
+          <p>
+            Built a secure <strong>Crypto &amp; Web3 Android Wallet</strong>.
+            Features include real-time asset monitoring, retail investment guidance,
+            scam detection alerts, and community news aggregation.
+            Stack: <strong>Kotlin, MVVM, Jetpack, Hilt, Retrofit, Coroutines, Room</strong>.
+          </p>
+        </div>
+
+        <div class="experience-block load-hidden">
+          <h3>Mobile Developer <span class="experience-company">@ Infostrates — Ponant</span></h3>
+          <p class="experience-date">2018 – 2020</p>
+          <p>
+            Built the <strong>Ponant</strong> luxury cruise app from scratch in
+            <strong>React Native</strong>. Handled navigation, Redux state management,
+            JWT authentication, and REST API integration. Maintained the Android native
+            layer (Java/Kotlin) and set up automated testing pipelines with
+            <strong>Detox</strong> and <strong>Appium</strong>.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- /END Experience Section -->
+
+  <!-- **** Skills Section **** -->
   <section id="skills">
     <div class="container">
       <h2 class="section-title load-hidden">Skills</h2>
@@ -104,6 +197,22 @@
           <i class="devicon-java-plain colored skills-wrapper__icon"></i>
           <span class="skills-wrapper__text">Java</span>
         </a>
+        <a href="https://reactnative.dev/" target="_blank" class="skills-wrapper__item">
+          <i class="devicon-react-original colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">React Native</span>
+        </a>
+        <a href="https://developer.android.com/jetpack/compose" target="_blank" class="skills-wrapper__item">
+          <i class="devicon-jetpackcompose-plain colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">Compose</span>
+        </a>
+        <a href="https://developer.android.com/jetpack" target="_blank" class="skills-wrapper__item">
+          <i class="devicon-android-plain colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">Jetpack</span>
+        </a>
+        <a href="https://firebase.google.com/" target="_blank" class="skills-wrapper__item">
+          <i class="devicon-firebase-plain colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">Firebase</span>
+        </a>
         <a href="https://git-scm.com/" target="_blank" class="skills-wrapper__item">
           <i class="devicon-git-plain colored skills-wrapper__icon"></i>
           <span class="skills-wrapper__text">Git</span>
@@ -116,18 +225,6 @@
           class="skills-wrapper__item">
           <i class="devicon-sqlite-plain colored skills-wrapper__icon"></i>
           <span class="skills-wrapper__text">Room</span>
-        </a>
-        <a href="https://developer.android.com/jetpack/compose" target="_blank" class="skills-wrapper__item">
-          <i class="devicon-android-plain colored skills-wrapper__icon"></i>
-          <span class="skills-wrapper__text">Compose</span>
-        </a>
-        <a href="https://developer.android.com/jetpack" target="_blank" class="skills-wrapper__item">
-          <i class="devicon-android-plain colored skills-wrapper__icon"></i>
-          <span class="skills-wrapper__text">Jetpack</span>
-        </a>
-        <a href="https://firebase.google.com/" target="_blank" class="skills-wrapper__item">
-          <i class="devicon-firebase-plain colored skills-wrapper__icon"></i>
-          <span class="skills-wrapper__text">Firebase</span>
         </a>
         <a href="https://m3.material.io/" target="_blank" class="skills-wrapper__item">
           <i class="devicon-materialui-plain colored skills-wrapper__icon"></i>
@@ -156,6 +253,7 @@
       </div>
     </div>
   </section>
+  <!-- /END Skills Section -->
 
   <!-- **** Projects Section **** -->
   <section id="projects">
@@ -163,7 +261,6 @@
       <div class="project-wrapper">
         <h2 class="section-title dark-blue-text">Projects</h2>
 
-        <!-- Notice: each .row is a project -->
         <div class="row">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text load-hidden">
@@ -202,7 +299,9 @@
             </div>
           </div>
         </div>
+
         <hr /> <br />
+
         <div class="row">
           <div class="col-lg-8 col-sm-12">
             <div class="project-wrapper__image load-hidden">
@@ -225,7 +324,7 @@
               <h3 class="project-wrapper__text-title">Saffelo</h3>
               <div>
                 <p class="mb-4">
-                  Secure Crypto & Web3 Android Wallet.
+                  Secure Crypto &amp; Web3 Android Wallet.
                   Asset monitoring, investment advice, and scam alerts.
                 </p>
                 <div class="tags-container">
@@ -243,7 +342,9 @@
             </div>
           </div>
         </div>
+
         <hr /> <br />
+
         <div class="row">
           <div class="col-lg-4 col-sm-12">
             <div class="project-wrapper__text load-hidden">
@@ -283,7 +384,9 @@
             </div>
           </div>
         </div>
+
         <hr /> <br />
+
         <div class="row">
           <div class="col-lg-8 col-sm-12">
             <div class="project-wrapper__image load-hidden">
@@ -331,11 +434,13 @@
   <!-- **** Contact Section **** -->
   <section id="contact">
     <div class="container">
-      <h2 class="section-title">Contact</h2>
+      <h2 class="section-title">Let's work together</h2>
       <div class="contact-wrapper load-hidden">
-        <p class="contact-wrapper__text">Book a Meet</p>
+        <p class="contact-wrapper__text">
+          Have a project in mind or want to chat? Book a quick call — I'd love to hear from you.
+        </p>
         <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume"
-          href="https://calendly.com/bdiouimedsalah">Contact Me</a>
+          href="https://calendly.com/bdiouimedsalah">Book a Call</a>
       </div>
     </div>
   </section>
@@ -348,23 +453,22 @@
         <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
       </a>
       <div class="social-links">
-        <a rel="noreferrer" href="https://buymeacoffee.com/mbdioui" target="_blank">
+        <a rel="noreferrer" href="https://buymeacoffee.com/mbdioui" target="_blank" aria-label="Buy me a coffee">
           <i class="fa fa-coffee fa-inverse"></i>
         </a>
-        <a rel="noreferrer" href="https://www.linkedin.com/in/medsalahbdioui/" target="_blank">
+        <a rel="noreferrer" href="https://www.linkedin.com/in/medsalahbdioui/" target="_blank" aria-label="LinkedIn">
           <i class="fa fa-linkedin fa-inverse"></i>
         </a>
-        <a rel="noreferrer" href="mailTo:mbdioui@outlook.fr" target="_blank">
-          <i class="fa fa-skype fa-inverse"></i>
+        <a rel="noreferrer" href="mailto:bdiouimedsalah@gmail.com" aria-label="Email">
+          <i class="fa fa-envelope fa-inverse"></i>
         </a>
-        <a rel="noreferrer" href="https://github.com/mbdioui" target="_blank">
+        <a rel="noreferrer" href="https://github.com/mbdioui" target="_blank" aria-label="GitHub">
           <i class="fa fa-github fa-inverse"></i>
         </a>
       </div>
 
       <hr />
 
-      <!-- Notice: if you want to give me some credit, it will be huge for me! if not, put your data on it -->
       <p class="footer__text">
         © 2025 - developed by
         <a rel="noreferrer" href="https://github.com/mbdioui" target="_blank">Mohamed BDIOUI</a>

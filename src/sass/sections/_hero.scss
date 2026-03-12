@@ -7,7 +7,7 @@
   background: $white-color;
   font-weight: 400;
   color: $dark-blue-text;
-  padding: 0rem 5.6rem;
+  padding: 70px 5.6rem 0;
   margin-bottom: 0;
   top: 0;
   left: 0;
@@ -24,8 +24,12 @@
   background-position: center;
   background-size: cover; */
 
+  @include respond(tab-port) {
+    padding-top: 60px;
+  }
+
   @include respond(phone) {
-    padding: 0rem $default-font-size;
+    padding: 56px $default-font-size 0;
   }
 
   &.hero-elis {
@@ -119,6 +123,9 @@
 
   .hero-cta {
     display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    flex-wrap: wrap;
 
     @include respond(tab-port) {
       justify-content: center;
