@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+
 @import "./sass/vendors/bootstrap.scss";
 
 @import "./sass/abstracts/mixins";
@@ -12,6 +14,7 @@
 
 @import "./sass/layout/footer";
 @import "./sass/layout/sections";
+@import "./sass/layout/navbar";
 
 @import "./sass/sections/about";
 @import "./sass/sections/contact";
