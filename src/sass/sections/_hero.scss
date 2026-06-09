@@ -1,0 +1,172 @@
+#hero {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  border-bottom: 0px;
+  background: $white-color;
+  font-weight: 400;
+  color: $dark-blue-text;
+  padding: 70px 5.6rem 0;
+  margin-bottom: 0;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+
+  // Set position sticky so the jumbotron stays fixed while you scroll.
+  // position: sticky;
+
+  // If you want to set a background image on the hero section, uncomment these with your custom image
+
+  /* background: url("/src/assets/[your-image].png");
+  background-position: center;
+  background-size: cover; */
+
+  @include respond(tab-port) {
+    padding-top: 60px;
+  }
+
+  @include respond(phone) {
+    padding: 56px $default-font-size 0;
+  }
+
+  &.hero-elis {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./assets/elis-bg.png");
+    background-position: center;
+    background-size: cover;
+    color: $white-color;
+
+    .hero-title,
+    .hero-cta a {
+      color: $white-color;
+    }
+
+    .text-color-main {
+      color: $white-color !important;
+    }
+  }
+
+  &.hero-saffelo {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("./assets/saffelo-bg.png");
+    background-position: center;
+    background-size: cover;
+    color: $white-color;
+
+    .hero-title,
+    .hero-cta a {
+      color: $white-color;
+    }
+
+    .text-color-main {
+      color: $white-color !important;
+    }
+  }
+
+  &.hero-bein {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./assets/bein-bg.png");
+    background-position: center;
+    background-size: cover;
+    color: $white-color;
+
+    .hero-title,
+    .hero-cta a {
+      color: $white-color;
+    }
+
+    .text-color-main {
+      color: $white-color !important;
+    }
+  }
+
+  &.hero-ratp {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("./assets/ratp-bg.png");
+    background-position: center;
+    background-size: cover;
+    color: $white-color;
+
+    .hero-title,
+    .hero-cta a {
+      color: $white-color;
+    }
+
+    .text-color-main {
+      color: $white-color !important;
+    }
+  }
+
+  .hero-title {
+    font-size: 5.6rem;
+    font-weight: 700;
+    margin-bottom: 3.2rem;
+    text-align: left;
+
+    @include respond(tab-land) {
+      font-size: 4rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 3.6rem;
+      text-align: center;
+    }
+
+    @include respond(phone) {
+      font-size: 3.5rem;
+      line-height: 1.5;
+    }
+
+    @include respond(phone-xs) {
+      font-size: 2.8rem;
+    }
+  }
+
+  .hero-cta {
+    display: flex;
+    align-items: center;
+    gap: 2.4rem;
+    flex-wrap: wrap;
+
+    @include respond(tab-port) {
+      justify-content: center;
+    }
+
+    & a {
+      font-size: 2.4rem;
+
+      @include respond(phone) {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+.flags {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.flags img {
+  width: 30px;
+  /* Réduit la taille */
+  height: auto;
+  margin-left: 10px;
+  /* Espacement entre drapeaux */
+  cursor: pointer;
+}
+
+#hero .fa-android {
+  font-size: 4rem;
+  /* Ajustez la taille de l'icône */
+  color: $secondary-color;
+  /* Utilisez la couleur appropriée */
+  vertical-align: top;
+  margin-left: 20px;
+  transform: translate(-30%, -10%);
+  font-size: 5rem;
+  /* Augmentez la taille de l'icône si nécessaire */
+  display: inline-block;
+  /* Assurez-vous que l'élément n'est pas masqué */
+  opacity: 1;
+}

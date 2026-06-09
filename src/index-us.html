@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="en" class="sr">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
+
+  <title>Mohamed BDIOUI | Senior Android Engineer</title>
+  <meta name="keywords" content="Android, Kotlin, Java, Jetpack Compose, MVI, MVVM, Clean Architecture, TDD, CI/CD, Mobile Engineer" />
+  <meta name="description" content="Mohamed BDIOUI — Senior Android Engineer with 6+ years of experience building scalable, maintainable apps with Kotlin, Jetpack Compose, TDD and CI/CD." />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="styles.scss" />
+  <script defer src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
+</head>
+
+<body>
+  <div id="top"></div>
+
+  <!-- **** Navbar **** -->
+  <nav id="navbar">
+    <div class="navbar__container">
+      <a href="#top" class="navbar__logo">MB<span>.</span></a>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="navbar__links" id="navLinks">
+        <li><a href="#about" class="navbar__link">About</a></li>
+        <li><a href="#experience" class="navbar__link">Experience</a></li>
+        <li><a href="#skills" class="navbar__link">Skills</a></li>
+        <li><a href="#projects" class="navbar__link">Projects</a></li>
+        <li><a href="#contact" class="navbar__link">Contact</a></li>
+        <li class="navbar__lang">
+          <a href="index.html" class="navbar__lang-link" title="Français">
+            <img src="assets/fr-flag.png" alt="Français" class="navbar__flag" />
+          </a>
+          <a href="index-us.html" class="navbar__lang-link navbar__lang-link--active" title="English">
+            <img src="assets/us-flag.png" alt="English" class="navbar__flag" />
+          </a>
+        </li>
+        <li>
+          <a rel="noreferrer" href="assets/Resume_Android_senior_5_2026.pdf" target="_blank" class="cta-btn cta-btn--hero navbar__cta">
+            Resume
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <!-- /END Navbar -->
+
+  <!-- **** Hero Section **** -->
+  <section id="hero" class="jumbotron">
+    <div class="container">
+      <h1 class="hero-title load-hidden">
+        Hi, I'm <span class="text-color-main">Mohamed BDIOUI</span>
+        <br />
+        Senior Android Engineer —
+        <br />
+        Scalable, maintainable, production-ready apps.
+        <a class="hero-title load-hidden" rel="noreferrer" target="_blank">
+          <i class="fa fa-android fa-inverse"></i>
+        </a>
+      </h1>
+      <div class="hero-cta load-hidden">
+        <a rel="noreferrer" class="cta-btn cta-btn--hero" href="#about">Know more</a>
+        <a rel="noreferrer" class="cta-btn cta-btn--hero" href="assets/Resume_Android_senior_5_2026.pdf" target="_blank">View Resume</a>
+      </div>
+    </div>
+  </section>
+  <!-- /END Hero Section -->
+
+  <!-- **** About Section **** -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title load-hidden">About me</h2>
+      <div class="row about-wrapper">
+        <div class="col-md-6 col-sm-12">
+          <div class="about-wrapper__image load-hidden">
+            <img alt="Profile Image" class="img-fluid rounded shadow-lg" height="auto" width="300px"
+              src="assets/profile.png" />
+          </div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="about-wrapper__info load-hidden">
+            <p class="about-wrapper__info-text">
+              Senior Android Engineer with 6+ years of experience building scalable, maintainable apps using
+              <strong>Kotlin</strong> and <strong>Jetpack Compose</strong>. Expert in modern architectures
+              (MVI, MVVM, Clean Architecture), test automation (code coverage &gt;70%), and CI/CD pipelines.
+              <br /><br />Proven track record of delivering production-critical applications for fintech, logistics,
+              entertainment, and IoT. Strong experience with RESTful APIs, continuous integration
+              (Jenkins, GitLab, Bitrise), and quality tools like SonarQube, Detekt, JIRA and Confluence.
+              <br /><br />Fluent in English and French, comfortable in international, agile environments.
+              Passionate about TDD and Clean Code principles to deliver tested, maintainable code.
+            </p>
+            <div class="stats-bar load-hidden">
+              <div class="stats-bar__item">
+                <span class="stats-bar__number">6+</span>
+                <span class="stats-bar__label">Years Exp.</span>
+              </div>
+              <div class="stats-bar__item">
+                <span class="stats-bar__number">70%+</span>
+                <span class="stats-bar__label">Test Coverage</span>
+              </div>
+              <div class="stats-bar__item">
+                <span class="stats-bar__number">4+</span>
+                <span class="stats-bar__label">Industries</span>
+              </div>
+            </div>
+            <span class="d-flex mt-3">
+              <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume" href="assets/Resume_Android_senior_5_2026.pdf">
+                View Resume
+              </a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- /END About Section -->
+
+  <!-- **** Experience Section **** -->
+  <section id="experience">
+    <div class="container">
+      <h2 class="section-title load-hidden">Experience</h2>
+      <div class="experience-wrapper">
+
+        <div class="experience-block load-hidden">
+          <h3>Android Senior Consultant <span class="experience-company">@ NeoPixl Luxembourg</span></h3>
+          <p class="experience-date">July 2025 – January 2026</p>
+          <p>
+            Architected and built two greenfield Android applications — <strong>Eboo Post Luxembourg</strong> (e-banking)
+            and <strong>World Kids Athletic</strong> (junior athletics coaching) — from scratch using Kotlin,
+            Jetpack Compose, and MVI architecture, delivering a fully functional MVP in under 3 months.
+            Enforced code quality by integrating Detekt, Danger, and SonarQube into the CI pipeline,
+            raising code coverage from 20% to over 70%. Automated CI/CD with Bitrise.
+            Acted as <strong>Lead Tech Android</strong>: defined technical roadmaps, distributed tasks,
+            performed code reviews, and mentored developers on Compose best practices.
+            Documented functional and technical specifications in Confluence, tracked tasks in Redmine,
+            and aligned UI implementation with Figma mockups. Performed stress and performance testing.
+          </p>
+        </div>
+
+        <div class="experience-block load-hidden">
+          <h3>Android Senior Consultant <span class="experience-company">@ Elis</span></h3>
+          <p class="experience-date">January 2023 – June 2025</p>
+          <p>
+            Developed a B2B logistics application used daily by field agents to manage cleaning
+            rounds, inventory, uniform collection, and pest control visits, deployed internationally
+            in Brazil and Canada. Refactored legacy Java codebase to Kotlin with RxJava and MVVM,
+            eliminating all memory leaks and reducing cold start time.
+            Built intelligent route optimisation using <strong>Here SDK (V3/V4)</strong>
+            that adapts itineraries by vehicle type and respects low-emission zones (ZFE).
+            Implemented real-time data synchronisation with the back office for visit proofs,
+            break reports, and inventory updates.
+            Audited and resolved hardware-specific performance issues on Zebra and Chainway PDAs.
+            Managed international rollouts including customs and regulatory adaptations for countries
+            like Poland, collaborating directly with product owners and local stakeholders.
+          </p>
+        </div>
+
+        <div class="experience-block load-hidden">
+          <h3>Freelance Android Developer <span class="experience-company">@ Safello</span></h3>
+          <p class="experience-date">June 2022 – December 2022</p>
+          <p>
+            Built a cryptocurrency portfolio application from scratch using <strong>Kotlin,
+            Jetpack Compose, and Material 3</strong>, delivering a modern, expressive UI.
+            Integrated multiple third-party exchange APIs (Binance, BitGet, Kraken) to aggregate user asset data
+            and display real-time charts.
+            Connected blockchain explorer APIs (Arkham, Polygonscan) to retrieve full transaction histories
+            and present hashes in a user-friendly format.
+            Applied MVVM architecture with Flow and Coroutines to create a reactive data layer
+            that gracefully handled rate limits and network failures.
+            Migrated existing XML layouts to Compose. Wrote technical specifications for seamless handover.
+          </p>
+        </div>
+
+        <div class="experience-block load-hidden">
+          <h3>Presales Engineer <span class="experience-company">@ Klanik</span></h3>
+          <p class="experience-date">December 2021 – June 2022</p>
+          <p>
+            Led presales workshops for web and mobile projects, translating client needs into
+            functional scopes, risk assessments, and accurate effort estimations.
+            Designed and prototyped front-end solutions using <strong>React and React Native</strong>,
+            demonstrating feasibility and accelerating contract closures.
+            Collaborated with delivery teams to ensure proposed architectures aligned with
+            company tech standards (clean architecture, CI/CD, testing strategies).
+            Authored commercial proposals and technical annexes used by the sales team to win new accounts.
+          </p>
+        </div>
+
+        <div class="experience-block load-hidden">
+          <h3>Mobile Developer (native and hybrid) <span class="experience-company">@ Infostrates — Ponant</span></h3>
+          <p class="experience-date">September 2020 – November 2021</p>
+          <p>
+            Served as Senior Android Developer for the <strong>Ponant Compagnon</strong> luxury cruise ship
+            application, ensuring a successful launch of the Commandant Charcot vessel.
+            Led a major refactoring initiative, migrating RxJava to Coroutines across the entire codebase,
+            reducing thread management complexity and improving crash-free rates.
+            Implemented feature flags to conditionally enable services before/after the voyage,
+            including newsletters, room service, and live camera views.
+            Collected and challenged client requirements directly, translating them into
+            technico-functional specifications and accurate work plans.
+            Onboarded and mentored junior and medior developers. Used GraphQL, Charles Proxy and MVVM.
+          </p>
+        </div>
+
+        <div class="experience-block load-hidden">
+          <h3>Android TV Developer <span class="experience-company">@ SFR</span></h3>
+          <p class="experience-date">November 2019 – February 2020</p>
+          <p>
+            Developed core features for the <strong>GENT8TV</strong> set-top box application,
+            displaying live and recorded TV programmes with advanced filtering (favourites, in progress,
+            recorded).
+            Integrated playback control fragments into the main video stream, enabling rewind,
+            fast-forward, and "continue watching" functionality.
+            Performed a full UI overhaul, migrating legacy layouts to ConstraintLayout and ViewBinding.
+            Fixed critical bugs and improved code maintainability for SFR subscribers.
+          </p>
+        </div>
+
+        <div class="experience-block load-hidden">
+          <h3>Project Engineer <span class="experience-company">@ Orange</span></h3>
+          <p class="experience-date">September 2017 – July 2019</p>
+          <p>
+            Maintained and enhanced native Android applications for industrial process digitalisation (smart building)
+            using Java and Kotlin.
+            Integrated a <strong>DialogFlow chatbot</strong> into an existing application, adding conversational
+            capabilities for field technicians.
+            Modernised application architecture by introducing Jetpack ViewModel, DataBinding, LiveData, and Coroutines.
+            Collaborated in R&amp;D workshops to analyse feasibility and propose technical solutions
+            aligned with Orange's design charter.
+            Applied clean architecture principles to decouple business logic from UI,
+            significantly simplifying unit testing and future feature additions.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- /END Experience Section -->
+
+  <!-- **** Skills Section **** -->
+  <section id="skills">
+    <div class="container">
+      <h2 class="section-title load-hidden">Skills</h2>
+      <div class="skills-wrapper load-hidden">
+        <a href="https://developer.android.com/" target="_blank" class="skills-wrapper__item">
+          <i class="devicon-android-plain colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">Android</span>
+        </a>
+        <a href="https://kotlinlang.org/" target="_blank" class="skills-wrapper__item">
+          <i class="devicon-kotlin-plain colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">Kotlin</span>
+        </a>
+        <a href="https://www.java.com/" target="_blank" class="skills-wrapper__item">
+          <i class="devicon-java-plain colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">Java</span>
+        </a>
+        <a href="https://developer.android.com/jetpack/compose" target="_blank" class="skills-wrapper__item">
+          <i class="devicon-jetpackcompose-plain colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">Compose</span>
+        </a>
+        <a href="https://developer.android.com/topic/architecture" target="_blank" class="skills-wrapper__item">
+          <i class="fa fa-code skills-wrapper__icon" style="color: #3ddc84;"></i>
+          <span class="skills-wrapper__text">MVVM</span>
+        </a>
+        <a href="https://developer.android.com/kotlin/coroutines" target="_blank" class="skills-wrapper__item">
+          <i class="devicon-kotlin-plain colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">Coroutines</span>
+        </a>
+        <a href="https://square.github.io/retrofit/" target="_blank" class="skills-wrapper__item">
+          <i class="fa fa-exchange skills-wrapper__icon" style="color: #3ddc84;"></i>
+          <span class="skills-wrapper__text">Retrofit</span>
+        </a>
+        <a href="https://dagger.dev/hilt/" target="_blank" class="skills-wrapper__item">
+          <i class="fa fa-cogs skills-wrapper__icon" style="color: #3ddc84;"></i>
+          <span class="skills-wrapper__text">Hilt</span>
+        </a>
+        <a href="https://git-scm.com/" target="_blank" class="skills-wrapper__item">
+          <i class="devicon-git-plain colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">Git</span>
+        </a>
+        <a href="https://github.com/mbdioui" target="_blank" class="skills-wrapper__item">
+          <i class="devicon-github-original colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">GitHub</span>
+        </a>
+        <a href="https://developer.android.com/jetpack/androidx/releases/room" target="_blank"
+          class="skills-wrapper__item">
+          <i class="devicon-sqlite-plain colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">Room</span>
+        </a>
+        <a href="https://graphql.org/" target="_blank" class="skills-wrapper__item">
+          <i class="devicon-graphql-plain colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">GraphQL</span>
+        </a>
+        <a href="https://developer.android.com/topic/architecture" target="_blank" class="skills-wrapper__item">
+          <i class="fa fa-code skills-wrapper__icon" style="color: #3ddc84;"></i>
+          <span class="skills-wrapper__text">MVI</span>
+        </a>
+        <a href="https://m3.material.io/" target="_blank" class="skills-wrapper__item">
+          <i class="devicon-materialui-plain colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">Material 3</span>
+        </a>
+        <a href="https://www.sonarqube.org/" target="_blank" class="skills-wrapper__item">
+          <i class="fa fa-code skills-wrapper__icon" style="color: #4e9bcd;"></i>
+          <span class="skills-wrapper__text">SonarQube</span>
+        </a>
+        <a href="https://detekt.dev/" target="_blank" class="skills-wrapper__item">
+          <i class="devicon-kotlin-plain colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">Detekt</span>
+        </a>
+        <a href="https://bitrise.io/" target="_blank" class="skills-wrapper__item">
+          <i class="devicon-bitbucket-plain colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">Bitrise</span>
+        </a>
+        <a href="https://www.jenkins.io/" target="_blank" class="skills-wrapper__item">
+          <i class="devicon-jenkins-plain colored skills-wrapper__icon"></i>
+          <span class="skills-wrapper__text">Jenkins</span>
+        </a>
+        <a href="https://developer.here.com/" target="_blank" class="skills-wrapper__item">
+          <i class="fa fa-map-marker skills-wrapper__icon" style="color: #00afb9;"></i>
+          <span class="skills-wrapper__text">Here SDK</span>
+        </a>
+        <a href="https://en.wikipedia.org/wiki/Test-driven_development" target="_blank" class="skills-wrapper__item">
+          <i class="fa fa-check-circle skills-wrapper__icon" style="color: #3ddc84;"></i>
+          <span class="skills-wrapper__text">TDD</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- /END Skills Section -->
+
+  <!-- **** Projects Section **** -->
+  <section id="projects">
+    <div class="container">
+      <div class="project-wrapper">
+        <h2 class="section-title dark-blue-text">Projects</h2>
+
+        <div class="row">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text load-hidden">
+              <h3 class="project-wrapper__text-title">NeoPixl</h3>
+              <div>
+                <p class="mb-4">
+                  Two greenfield Android apps: e-banking (Eboo Post Luxembourg) and junior athletics coaching
+                  (World Kids Athletic). MVI architecture, Bitrise CI/CD, test coverage over 70%.
+                </p>
+                <div class="tags-container">
+                  <span class="tag">Kotlin</span>
+                  <span class="tag">Jetpack Compose</span>
+                  <span class="tag">MVI</span>
+                  <span class="tag">Bitrise</span>
+                  <span class="tag">Fintech</span>
+                </div>
+              </div>
+              <a class="cta-btn cta-btn--hero" href="project-neopixl-us.html">
+                View Project
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image load-hidden">
+              <a href="project-neopixl-us.html" class="project-wrapper__link">
+                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                  class="thumbnail rounded js-tilt">
+                  <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/XWHFh2IxyWk" title="NeoPixl Demo"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                  <div class="project-company-label">NeoPixl</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr /> <br />
+
+        <div class="row">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text load-hidden">
+              <h3 class="project-wrapper__text-title">Elis Glad</h3>
+              <div>
+                <p class="mb-4">
+                  B2B logistics app for field agents. Route optimization with Here SDK,
+                  back-office sync, visit proofs and inventory management on industrial PDAs.
+                </p>
+                <div class="tags-container">
+                  <span class="tag">Android Native</span>
+                  <span class="tag">Here SDK</span>
+                  <span class="tag">NFC/RFID</span>
+                  <span class="tag">Logistics</span>
+                  <span class="tag">Zebra/Chainway</span>
+                </div>
+              </div>
+              <a class="cta-btn cta-btn--hero" href="project-elis-glad-us.html">
+                <i class="fa fa-play"></i> View Project
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image load-hidden">
+              <a href="project-elis-glad-us.html" class="project-wrapper__link">
+                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                  class="thumbnail rounded js-tilt">
+                  <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/FrL64LZ8YLM" title="Elis Connect" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                  <div class="project-company-label">Elis</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr /> <br />
+
+        <div class="row">
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image load-hidden">
+              <a href="project-saffelo-us.html" class="project-wrapper__link">
+                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                  class="thumbnail rounded js-tilt">
+                  <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/OOFMgE4CcuQ?si=TdJLWICmp0ff86jK" title="Safello Wallet"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                  <div class="project-company-label">Saffelo</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text load-hidden">
+              <h3 class="project-wrapper__text-title">Saffelo</h3>
+              <div>
+                <p class="mb-4">
+                  Cryptocurrency portfolio with real-time asset monitoring via third-party APIs
+                  (Binance, BitGet, Kraken), charts and transaction history (Arkham, Polygonscan).
+                </p>
+                <div class="tags-container">
+                  <span class="tag">Android</span>
+                  <span class="tag">Kotlin</span>
+                  <span class="tag">MVVM</span>
+                  <span class="tag">Compose</span>
+                  <span class="tag">Material 3</span>
+                  <span class="tag">Crypto</span>
+                </div>
+              </div>
+              <a class="cta-btn cta-btn--hero" href="project-saffelo-us.html">
+                <i class="fa fa-play"></i> View Project
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr /> <br />
+
+        <div class="row">
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text load-hidden">
+              <h3 class="project-wrapper__text-title">SFR Gen8TV</h3>
+              <div>
+                <p class="mb-4">
+                  Official SFR 8th gen box app (Android TV).
+                  TV streaming, VOD, program listings, and video stream management.
+                </p>
+                <div class="tags-container">
+                  <span class="tag">Android TV</span>
+                  <span class="tag">Kotlin</span>
+                  <span class="tag">Clean Arch</span>
+                  <span class="tag">MVVM</span>
+                  <span class="tag">VOD</span>
+                  <span class="tag">Agile</span>
+                </div>
+              </div>
+              <a class="cta-btn cta-btn--hero" href="project-sfr-us.html">
+                View Project
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image load-hidden">
+              <a href="project-sfr-us.html" class="project-wrapper__link">
+                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                  class="thumbnail rounded js-tilt">
+                  <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/7nOhgM8RlIQ" title="SFR Gen8TV Demo" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                  <div class="project-company-label">SFR</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <hr /> <br />
+
+        <div class="row">
+          <div class="col-lg-8 col-sm-12">
+            <div class="project-wrapper__image load-hidden">
+              <a href="project-ponant-us.html" class="project-wrapper__link">
+                <div data-tilt data-tilt-max="4" data-tilt-glare="true" data-tilt-max-glare="0.5"
+                  class="thumbnail rounded js-tilt">
+                  <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/8YEGQFOHReU" title="Ponant App Demo" frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                  </div>
+                  <div class="project-company-label">Ponant</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-lg-4 col-sm-12">
+            <div class="project-wrapper__text load-hidden">
+              <h3 class="project-wrapper__text-title">Ponant Application</h3>
+              <div>
+                <p class="mb-4">
+                  Ponant Compagnon luxury cruise passenger app, Commandant Charcot launch.
+                  RxJava to Coroutines migration, feature flags and onboard services (newsletters, room service).
+                </p>
+                <div class="tags-container">
+                  <span class="tag">Android (Java/Kotlin)</span>
+                  <span class="tag">Coroutines</span>
+                  <span class="tag">MVVM</span>
+                  <span class="tag">GraphQL</span>
+                  <span class="tag">Feature Flags</span>
+                </div>
+              </div>
+              <a class="cta-btn cta-btn--hero" href="project-ponant-us.html">
+                <i class="fa fa-play"></i> View Project
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- /END Projects Section -->
+
+  <!-- **** Contact Section **** -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Let's work together</h2>
+      <div class="contact-wrapper load-hidden">
+        <p class="contact-wrapper__text">
+          Have a project in mind or want to chat? Book a quick call — I'd love to hear from you.
+        </p>
+        <a rel="noreferrer" target="_blank" class="cta-btn cta-btn--resume"
+          href="https://calendly.com/bdiouimedsalah">Book a Call</a>
+      </div>
+    </div>
+  </section>
+  <!-- /END Contact Section -->
+
+  <!-- **** Footer Section **** -->
+  <footer class="footer navbar-static-bottom">
+    <div class="container">
+      <a rel="noreferrer" href="#top" class="back-to-top">
+        <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
+      </a>
+      <div class="social-links">
+        <a rel="noreferrer" href="https://buymeacoffee.com/mbdioui" target="_blank" aria-label="Buy me a coffee">
+          <i class="fa fa-coffee fa-inverse"></i>
+        </a>
+        <a rel="noreferrer" href="https://www.linkedin.com/in/medsalahbdioui/" target="_blank" aria-label="LinkedIn">
+          <i class="fa fa-linkedin fa-inverse"></i>
+        </a>
+        <a rel="noreferrer" href="mailto:bdiouimedsalah@gmail.com" aria-label="Email">
+          <i class="fa fa-envelope fa-inverse"></i>
+        </a>
+        <a rel="noreferrer" href="https://github.com/mbdioui" target="_blank" aria-label="GitHub">
+          <i class="fa fa-github fa-inverse"></i>
+        </a>
+      </div>
+
+      <hr />
+
+      <p class="footer__text">
+        © 2026 - developed by
+        <a rel="noreferrer" href="https://github.com/mbdioui" target="_blank">Mohamed BDIOUI</a>
+      </p>
+    </div>
+  </footer>
+  <!-- /END Footer Section -->
+
+  <script defer type="module" src="index.js"></script>
+</body>
+
+</html>
