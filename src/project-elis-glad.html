@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="sr">
+<html lang="fr" class="sr project-detail-page">
 
 <head>
   <meta charset="utf-8" />
@@ -8,8 +8,8 @@
   <link rel="shortcut icon" type="image/png" href="assets/favicon.png" />
 
   <title>Mohamed BDIOUI | Elis Glad</title>
-  <meta name="keywords" content="Android, Logistique, HereWeGo, NFC, Elis" />
-  <meta name="description" content="Détails du projet Elis Glad" />
+  <meta name="keywords" content="Android, Logistics, Here SDK, NFC, Elis, Clean Architecture" />
+  <meta name="description" content="Détails du projet Elis Glad — application B2B de logistique pour agents terrain." />
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="styles.scss" />
@@ -17,6 +17,40 @@
 </head>
 
 <body>
+  <input type="checkbox" id="menu-toggle" class="sr-only" aria-hidden="true" />
+
+  <header class="detail-navbar">
+    <div class="detail-navbar__container">
+      <a href="index.html" class="detail-navbar__brand" aria-label="Retour à l'accueil">MB<span>.</span></a>
+
+      <label for="menu-toggle" class="detail-navbar__toggle" aria-label="Ouvrir/fermer le menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="detail-navbar__menu" aria-label="Navigation principale">
+        <a href="index.html#about" class="detail-navbar__link">À propos</a>
+        <a href="index.html#experience" class="detail-navbar__link">Expérience</a>
+        <a href="index.html#skills" class="detail-navbar__link">Compétences</a>
+        <a href="index.html#projects" class="detail-navbar__link">Projets</a>
+        <a href="index.html#contact" class="detail-navbar__link">Contact</a>
+
+        <div class="detail-navbar__lang" aria-label="Sélection de langue">
+          <a href="index.html" class="detail-navbar__flag--active" title="Français" aria-label="Français">
+            <img src="assets/fr-flag.png" alt="Français" class="detail-navbar__flag" />
+          </a>
+          <a href="project-elis-glad-us.html" title="English" aria-label="English">
+            <img src="assets/us-flag.png" alt="English" class="detail-navbar__flag" />
+          </a>
+        </div>
+
+        <a href="assets/CV_Android_senior_5_2026.pdf" target="_blank" class="detail-navbar__cta" rel="noreferrer">
+          Mon CV
+        </a>
+      </nav>
+    </div>
+  </header>
   <div id="top"></div>
 
   <section id="hero" class="jumbotron hero-elis">
@@ -30,87 +64,158 @@
     </div>
   </section>
 
-  <section id="project-detail">
-    <div class="container">
-      <h2 class="section-title load-hidden">Détails du Projet</h2>
-      <div class="row project-detail-wrapper">
-        <div class="col-md-12 col-sm-12">
-          <div class="project-detail-wrapper__info load-hidden">
-            <p class="project-detail-wrapper__info-text">
-              Ce projet est une application Android native développée pour Elis, axée sur la logistique et la
-              traçabilité.
-            </p>
+  <nav class="back-nav" aria-label="Navigation secondaire">
+    <a href="index.html#projects"><i class="fa fa-arrow-left" aria-hidden="true"></i> Tous les projets</a>
+  </nav>
 
-            <h3 class="project-detail-wrapper__text-title">Fonctionnalités Clés</h3>
-            <p class="project-detail-wrapper__info-text">
-              <b>Logistique :</b><br />
-              Intégration de la cartographie HereWeGo pour le traçage d'itinéraire, la planification de tournées avec
-              optimisation de trajet, le calcul de distances et d'ETA (Estimated Time of Arrival).
-            </p>
+  <main class="project-sheet load-hidden">
+    <header class="project-header">
+      <div class="project-header__top">
+        <div>
+          <h1 class="project-header__title">Elis Glad</h1>
+          <div class="project-header__subtitle">Application B2B — Logistique & Traçabilité</div>
+        </div>
+        <div class="project-header__meta">
+          <span class="project-header__meta-item"><i class="fa fa-building" aria-hidden="true"></i> Elis Paris</span>
+          <span class="project-header__meta-item"><i class="fa fa-calendar" aria-hidden="true"></i> Jan. 2023 — Juin 2025</span>
+          <span class="project-header__meta-item"><i class="fa fa-map-marker" aria-hidden="true"></i> Paris, France</span>
+        </div>
+      </div>
+      <div class="project-header__tags">
+        <span class="project-header__tag">Android Natif</span>
+        <span class="project-header__tag">Here SDK</span>
+        <span class="project-header__tag">NFC/RFID</span>
+        <span class="project-header__tag">PDA Industriel</span>
+      </div>
+    </header>
 
-            <p class="project-detail-wrapper__info-text">
-              <b>Traçabilité :</b><br />
-              Gestion d'inventaire et détection d'articles en utilisant diverses technologies : UHF, HF, NFC, 2D,
-              QRcode. Compatible avec les PDA industriels Chainway et Zebra.
+    <div class="project-body">
+      <div class="project-body__main">
+        <section class="detail-section">
+          <h2 class="detail-section__title">Résumé du projet</h2>
+          <div class="detail-block">
+            <p class="detail-block__text">
+              Application logistique B2B dédiée aux agents terrain d'<strong>Elis</strong> (nettoyage, récolte d'uniformes, tapis, nuisibles). Elle organise les tournées quotidiennes, assure la traçabilité des articles et digitalise les processus métiers sur PDA industriels.
             </p>
+          </div>
+        </section>
 
-            <p class="project-detail-wrapper__info-text">
-              <b>Preuve de visite :</b><br />
-              Prise de photo, assignation de QR code et digitalisation complète des processus métiers.
-            </p>
+        <section class="detail-section">
+          <h2 class="detail-section__title">Missions et fonctionnalités</h2>
 
-            <h3 class="project-detail-wrapper__text-title">Technologies</h3>
-            <div class="tags-container" style="flex-wrap: wrap; justify-content: start;">
-              <span class="tag">Android Natif</span>
-              <span class="tag">HereWeGo Maps</span>
-              <span class="tag">NFC/RFID</span>
-              <span class="tag">Zebra/Chainway SDK</span>
-              <span class="tag">QR Code</span>
+          <div class="detail-block">
+            <h3 class="detail-block__title">Logistique et tournées</h3>
+            <ul>
+              <li>Itinéraires optimisés par type de véhicule avec <strong>Here SDK V3/V4</strong>.</li>
+              <li>Planification de tournées, calcul de distances et estimation d'ETA.</li>
+              <li>Adaptation aux restrictions de pollution (<strong>ZFE</strong>).</li>
+              <li>Reporting des pauses, arrêts et temps de trajet.</li>
+            </ul>
+          </div>
+
+          <div class="detail-block">
+            <h3 class="detail-block__title">Traçabilité et inventaire</h3>
+            <ul>
+              <li>Gestion d'inventaire et détection d'articles via <strong>UHF, HF, NFC, 2D et QR code</strong>.</li>
+              <li>Compatibilité avec les PDA industriels <strong>Chainway</strong> et <strong>Zebra</strong>.</li>
+              <li>Preuves de passage : prise de photo et assignation de QR code.</li>
+              <li>Synchronisation avec le back-office en temps réel.</li>
+            </ul>
+          </div>
+
+          <div class="detail-block">
+            <h3 class="detail-block__title">Refactoring et performance</h3>
+            <ul>
+              <li>Migration progressive de Java vers Kotlin avec architecture <strong>MVVM</strong>.</li>
+              <li>Correction de toutes les fuites mémoire identifiées.</li>
+              <li>Optimisation des temps de chargement et de lancement de l'application.</li>
+              <li>Audit des limites d'usage sur PDA industriels.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="detail-section">
+          <h2 class="detail-section__title">Résultats obtenus</h2>
+          <div class="detail-block">
+            <ul>
+              <li>Déploiement international : <strong>Brésil, Canada, Pologne</strong>.</li>
+              <li>Adaptation aux contraintes douanières et réglementaires locales.</li>
+              <li>Application fluide et fiable, utilisée quotidiennement par des centaines d'agents terrain.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <aside class="project-body__sidebar">
+        <div class="sidebar-box">
+          <h3 class="sidebar-box__title">Stack technique</h3>
+
+          <div class="skill-group">
+            <div class="skill-group__title">Langages & UI</div>
+            <div class="tags-container">
+              <span class="tag">Kotlin</span>
+              <span class="tag">Java</span>
+              <span class="tag">Android SDK</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group__title">Architecture</div>
+            <div class="tags-container">
+              <span class="tag">MVVM</span>
+              <span class="tag">RxJava</span>
+              <span class="tag">Clean Architecture</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group__title">Cartographie & PDA</div>
+            <div class="tags-container">
+              <span class="tag">Here SDK</span>
+              <span class="tag">NFC</span>
+              <span class="tag">RFID</span>
+              <span class="tag">Zebra SDK</span>
+              <span class="tag">Chainway</span>
+            </div>
+          </div>
+
+          <div class="skill-group">
+            <div class="skill-group__title">Outils</div>
+            <div class="tags-container">
+              <span class="tag">REST API</span>
+              <span class="tag">SQLite</span>
+              <span class="tag">Git</span>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="row mt-5">
-        <div class="col-md-12">
-          <div class="project-wrapper__image load-hidden">
-            <div class="video-container">
-              <iframe src="https://www.youtube.com/embed/FrL64LZ8YLM" title="Elis Connect" frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </div>
+        <div class="sidebar-box">
+          <h3 class="sidebar-box__title">Liens</h3>
+          <div class="detail-actions" style="margin-top: 0;">
+            <a href="project-elis-glad-us.html" class="btn-detail btn-detail--outline"><i class="fa fa-globe" aria-hidden="true"></i> English version</a>
           </div>
         </div>
-      </div>
-
+      </aside>
     </div>
-  </section>
 
-  <footer class="footer navbar-static-bottom">
-    <div class="container">
-      <a href="#top" class="back-to-top">
-        <i class="fa fa-angle-up fa-2x" aria-hidden="true"></i>
-      </a>
-      <div class="social-links">
-        <a href="https://buymeacoffee.com/mbdioui" target="_blank">
-          <i class="fa fa-coffee fa-inverse"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/medsalahbdioui/" target="_blank">
-          <i class="fa fa-linkedin fa-inverse"></i>
-        </a>
-        <a href="mailto:mbdioui@outlook.fr" target="_blank">
-          <i class="fa fa-skype fa-inverse"></i>
-        </a>
-        <a href="https://github.com/mbdioui" target="_blank">
-          <i class="fa fa-github fa-inverse"></i>
-        </a>
+    <section class="project-media">
+      <h2 class="project-media__title">Démonstration</h2>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/FrL64LZ8YLM" title="Elis Connect" allowfullscreen></iframe>
       </div>
+    </section>
+  </main>
 
-      <hr />
-
-      <p class="footer__text">
-        © 2025 - développé par
-        <a href="https://github.com/mbdioui" target="_blank">Mohamed BDIOUI</a>
+  <footer class="detail-footer">
+    <div class="container">
+      <div class="detail-footer__social" aria-label="Réseaux sociaux">
+        <a href="https://buymeacoffee.com/mbdioui" target="_blank" rel="noreferrer" aria-label="Buy me a coffee"><i class="fa fa-coffee" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/medsalahbdioui/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="mailto:bdiouimedsalah@gmail.com" aria-label="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a href="https://github.com/mbdioui" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+      </div>
+      <p class="detail-footer__text">
+        © 2026 — Développé par <a href="https://github.com/mbdioui" target="_blank" rel="noreferrer">Mohamed BDIOUI</a>
       </p>
     </div>
   </footer>

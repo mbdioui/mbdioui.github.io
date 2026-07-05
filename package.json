@@ -17,7 +17,9 @@
     "src/project-neopixl.html",
     "src/project-neopixl-us.html",
     "src/project-orange.html",
-    "src/project-orange-us.html"
+    "src/project-orange-us.html",
+    "src/design-demo.html",
+    "src/design-demo-us.html"
   ],
   "scripts": {
     "start": "parcel",

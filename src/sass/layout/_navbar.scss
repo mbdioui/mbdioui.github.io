@@ -5,12 +5,16 @@
   right: 0;
   z-index: 1000;
   height: 70px;
-  background: transparent;
-  transition: background 0.4s ease, box-shadow 0.4s ease;
+  background: rgba($white-color, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba($dark-blue-text, 0.06);
+  transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 
   &.scrolled {
-    background: $white-color;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    background: rgba($white-color, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-color: rgba($dark-blue-text, 0.08);
   }
 
   .navbar__container {
