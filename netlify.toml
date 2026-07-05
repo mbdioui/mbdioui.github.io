@@ -1,5 +1,6 @@
 # Netlify settings for the gh-pages (prebuilt) branch.
-# The dist/ folder already contains the Parcel build, so no build command is needed.
+# GitHub Pages serves files at the root of this branch, so we keep the
+# Parcel build output at root and tell Netlify to publish from root as well.
 [build]
-  command = "echo 'Using prebuilt dist/ directory'"
-  publish = "dist"
+  command = "echo 'Using prebuilt root directory'"
+  publish = "."
