@@ -1,0 +1,5 @@
+# Netlify settings for the gh-pages (prebuilt) branch.
+# The dist/ folder already contains the Parcel build, so no build command is needed.
+[build]
+  command = "echo 'Using prebuilt dist/ directory'"
+  publish = "dist"
