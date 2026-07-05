@@ -1,108 +1,212 @@
-<!DOCTYPE html><html lang=fr class=sr><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1"><link rel="icon shortcut" type=image/png href=/favicon.ea990870.png><title>Mohamed BDIOUI | L'Application Ponant</title><meta name=keywords content="React Native, Android, Ponant, Infostrates, Travel"><meta name=description content="Détails du projet L'Application Ponant"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css><link rel=stylesheet href=/mbdioui.github.io.64e7a3c0.css><script defer src=https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js></script><body>
-    <div id=top></div>
+<!DOCTYPE html><html lang=fr class="project-detail-page sr"><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1"><link rel="icon shortcut" type=image/png href=/favicon.ea990870.png><title>Mohamed BDIOUI | L'Application Ponant</title><meta name=keywords content="React Native, Android, Ponant, Infostrates, Travel, GraphQL, Coroutines"><meta name=description content="Détails du projet Ponant Companion — application voyageur de croisière de luxe."><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css><link rel=stylesheet href=/project-elis-glad.078b9e0c.css><script defer src=https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js></script><body>
+  <input type=checkbox id=menu-toggle class=sr-only aria-hidden=true>
 
-    <section id=hero class="hero-ratp jumbotron">
-        <div class=container>
-            <h1 class="hero-title load-hidden">
-                <span class=text-color-main>L'Application Ponant</span>
-            </h1>
-            <p class="hero-cta load-hidden">
-                <a class="cta-btn cta-btn--hero" href=/index.html>Retour à l'accueil</a>
+  <header class=detail-navbar>
+    <div class=detail-navbar__container>
+      <a href=/index.html class=detail-navbar__brand aria-label="Retour à l'accueil">MB<span>.</span></a>
+
+      <label for=menu-toggle class=detail-navbar__toggle aria-label="Ouvrir/fermer le menu" role=button tabindex=0>
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class=detail-navbar__menu aria-label="Navigation principale">
+        <a href=/index.html#about class=detail-navbar__link>À propos</a>
+        <a href=/index.html#experience class=detail-navbar__link>Expérience</a>
+        <a href=/index.html#skills class=detail-navbar__link>Compétences</a>
+        <a href=/index.html#projects class=detail-navbar__link>Projets</a>
+        <a href=/index.html#contact class=detail-navbar__link>Contact</a>
+
+        <div class=detail-navbar__lang aria-label="Sélection de langue">
+          <a href=/index.html class=detail-navbar__flag--active title=Français aria-label=Français>
+            <img src=/fr-flag.ac8e67ed.png alt=Français class=detail-navbar__flag>
+          </a>
+          <a href=/project-ponant-us.html title=English aria-label=English>
+            <img src=/us-flag.d60281c5.png alt=English class=detail-navbar__flag>
+          </a>
+        </div>
+
+        <a href=/assets/CV_Android_senior_5_2026.pdf target=_blank class=detail-navbar__cta rel=noreferrer>
+          Mon CV
+        </a>
+      </nav>
+    </div>
+  </header>
+  <div id=top></div>
+
+  <section id=hero class="hero-ponant jumbotron">
+    <div class=container>
+      <h1 class="hero-title load-hidden">
+        <span class=text-color-main>L'Application Ponant</span>
+      </h1>
+      <p class="hero-cta load-hidden">
+        <a class="cta-btn cta-btn--hero" href=/index.html>Retour à l'accueil</a>
+      </p>
+    </div>
+  </section>
+
+  <nav class=back-nav aria-label="Navigation secondaire">
+    <a href=/index.html#projects><i class="fa fa-arrow-left" aria-hidden=true></i> Tous les projets</a>
+  </nav>
+
+  <main class="load-hidden project-sheet">
+    <header class=project-header>
+      <div class=project-header__top>
+        <div>
+          <h1 class=project-header__title>Ponant Companion</h1>
+          <div class=project-header__subtitle>Application voyageur — Croisière de luxe</div>
+        </div>
+        <div class=project-header__meta>
+          <span class=project-header__meta-item><i class="fa fa-building" aria-hidden=true></i> Infostrates</span>
+          <span class=project-header__meta-item><i class="fa fa-calendar" aria-hidden=true></i> Sept. 2020 — Nov. 2021</span>
+          <span class=project-header__meta-item><i class="fa fa-map-marker" aria-hidden=true></i> Marseille, France</span>
+        </div>
+      </div>
+      <div class=project-header__tags>
+        <span class=project-header__tag>Android</span>
+        <span class=project-header__tag>React Native</span>
+        <span class=project-header__tag>GraphQL</span>
+        <span class=project-header__tag>Coroutines</span>
+      </div>
+    </header>
+
+    <div class=project-body>
+      <div class=project-body__main>
+        <section class=detail-section>
+          <h2 class=detail-section__title>Résumé du projet</h2>
+          <div class=detail-block>
+            <p class=detail-block__text>
+              Développement de l'application mobile <strong>Ponant Companion</strong> pour Infostrates. L'application accompagne les passagers à bord des bateaux de croisière de luxe Ponant, notamment lors du lancement du nouveau paquebot <strong>Commandant Charcot</strong> en Antarctique.
             </p>
-        </div>
-    </section>
+          </div>
+        </section>
 
-    <section id=project-detail>
-        <div class=container>
-            <h2 class="load-hidden section-title">Détails du Projet</h2>
-            <div class="project-detail-wrapper row">
-                <div class="col-md-12 col-sm-12">
-                    <div class="load-hidden project-detail-wrapper__info">
-                        <p class=project-detail-wrapper__info-text>
-                            Développement de l'application mobile de croisière de luxe Ponant pour Infostrates.
-                        </p>
+        <section class=detail-section>
+          <h2 class=detail-section__title>Missions et fonctionnalités</h2>
 
-                        <h3 class=project-detail-wrapper__text-title>Missions et Fonctionnalités</h3>
-                        <p class=project-detail-wrapper__info-text>
-                            <b>React Native From Scratch :</b><br>
-                            Développement complet de l'application : navigation, gestion d'état avec Redux et Context,
-                            authentification JWT, appels API avec Axios, et animations fluides.
-                        </p>
+          <div class=detail-block>
+            <h3 class=detail-block__title>Mobile et tablette</h3>
+            <ul>
+              <li>Maintenance et évolution de l'application sur mobile et tablette.</li>
+              <li>Combinaison de développement <strong>Android natif (Java/Kotlin)</strong> et <strong>React Native</strong>.</li>
+              <li>Développement from scratch de fonctionnalités : newsletters, Room Services, camView.</li>
+              <li>Création d'une version Web via <strong>React Native Web</strong>.</li>
+            </ul>
+          </div>
 
-                        <p class=project-detail-wrapper__info-text>
-                            <b>Évolution Mobile/Tablette :</b><br>
-                            Maintenance et évolution de l'application sur mobile et tablette, combinant développement
-                            Android natif (Java/Kotlin) et React Native.
-                        </p>
+          <div class=detail-block>
+            <h3 class=detail-block__title>Modernisation technique</h3>
+            <ul>
+              <li>Migration de <strong>RxJava vers Coroutines</strong> pour une code base plus lisible et performante.</li>
+              <li>Mise en place de <strong>feature flipping</strong> (avant/après voyage) pour activer progressivement les fonctionnalités.</li>
+              <li>Intégration de <strong>GraphQL</strong> pour les échanges avec les services backend.</li>
+              <li>Audit performance et propositions d'amélioration.</li>
+            </ul>
+          </div>
 
-                        <p class=project-detail-wrapper__info-text>
-                            <b>Qualité et Tests :</b><br>
-                            Mise en place de tests automatisés avec Detox et Appium pour assurer la robustesse de
-                            l'application. Création d'une version pour le Web via React Native Web.
-                        </p>
+          <div class=detail-block>
+            <h3 class=detail-block__title>Qualité et collaboration</h3>
+            <ul>
+              <li>Tests automatisés avec <strong>Detox</strong> et <strong>Appium</strong>.</li>
+              <li>Recueil des besoins client, chiffrage et reporting.</li>
+              <li>Onboarding et mentorat de développeurs juniors/mediors.</li>
+              <li>Utilisation de <strong>Charles Proxy</strong> et Postman pour le debugging API.</li>
+            </ul>
+          </div>
+        </section>
 
-                        <h3 class=project-detail-wrapper__text-title>Stack Technique</h3>
-                        <div class=tags-container style=flex-wrap:wrap;justify-content:start>
-                            <span class=tag>React Native</span>
-                            <span class=tag>Android (Java/Kotlin)</span>
-                            <span class=tag>Redux/Context</span>
-                            <span class=tag>Detox/Appium</span>
-                            <span class=tag>MVVM</span>
-                            <span class=tag>Git</span>
-                        </div>
+        <section class=detail-section>
+          <h2 class=detail-section__title>Résultats obtenus</h2>
+          <div class=detail-block>
+            <ul>
+              <li>Lancement réussi du <strong>Commandant Charcot</strong> en Antarctique.</li>
+              <li>Respect des jalons et du budget projet.</li>
+              <li>Application stable et enrichie de nouvelles fonctionnalités embarquées.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
 
-                        <div class=btn-wrapper>
-                            
-                            <a rel=noreferrer target=_blank class="cta-btn cta-btn--resume" href=https://www.ponant.com/>
-                                Voir le site Ponant
-                            </a>
-                        </div>
-                    </div>
-                </div>
+      <aside class=project-body__sidebar>
+        <div class=sidebar-box>
+          <h3 class=sidebar-box__title>Stack technique</h3>
+
+          <div class=skill-group>
+            <div class=skill-group__title>Langages &amp; Frameworks</div>
+            <div class=tags-container>
+              <span class=tag>Kotlin</span>
+              <span class=tag>Java</span>
+              <span class=tag>React Native</span>
+              <span class=tag>Redux</span>
             </div>
+          </div>
 
-            <div class="mt-5 row">
-                <div class=col-md-12>
-                    <div class="load-hidden project-wrapper__image">
-                        <div class=video-container>
-                            <iframe src=https://www.youtube.com/embed/8YEGQFOHReU title="L'Application Ponant Demo" frameborder=0 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy=strict-origin-when-cross-origin allowfullscreen></iframe>
-                        </div>
-                    </div>
-                </div>
+          <div class=skill-group>
+            <div class=skill-group__title>Architecture</div>
+            <div class=tags-container>
+              <span class=tag>MVVM</span>
+              <span class=tag>Coroutines</span>
+              <span class=tag>Feature Flags</span>
             </div>
+          </div>
 
+          <div class=skill-group>
+            <div class=skill-group__title>APIs &amp; Tests</div>
+            <div class=tags-container>
+              <span class=tag>GraphQL</span>
+              <span class=tag>REST</span>
+              <span class=tag>Detox</span>
+              <span class=tag>Appium</span>
+              <span class=tag>Charles Proxy</span>
+            </div>
+          </div>
+
+          <div class=skill-group>
+            <div class=skill-group__title>Outils</div>
+            <div class=tags-container>
+              <span class=tag>Git</span>
+              <span class=tag>Postman</span>
+              <span class=tag>React Native Web</span>
+            </div>
+          </div>
         </div>
-    </section>
 
-    <footer class="footer navbar-static-bottom">
-        <div class=container>
-            <a href=#top class=back-to-top>
-                <i class="fa fa-2x fa-angle-up" aria-hidden=true></i>
+        <div class=sidebar-box>
+          <h3 class=sidebar-box__title>Liens</h3>
+          <div class=detail-actions style=margin-top:0>
+            <a href=https://www.ponant.com/ target=_blank class="btn-detail btn-detail--primary" rel=noreferrer>
+              <i class="fa fa-external-link" aria-hidden=true></i> Site Ponant
             </a>
-            <div class=social-links>
-                <a href=https://buymeacoffee.com/mbdioui target=_blank>
-                    <i class="fa fa-coffee fa-inverse"></i>
-                </a>
-                <a href=https://www.linkedin.com/in/medsalahbdioui/ target=_blank>
-                    <i class="fa fa-inverse fa-linkedin"></i>
-                </a>
-                <a href=mailto:mbdioui@outlook.fr target=_blank>
-                    <i class="fa fa-inverse fa-skype"></i>
-                </a>
-                <a href=https://github.com/mbdioui target=_blank>
-                    <i class="fa fa-github fa-inverse"></i>
-                </a>
-            </div>
-
-            <hr>
-
-            <p class=footer__text>
-                © 2025 - développé par
-                <a href=https://github.com/mbdioui target=_blank>Mohamed BDIOUI</a>
-            </p>
+            <a href=/project-ponant-us.html class="btn-detail btn-detail--outline"><i class="fa fa-globe" aria-hidden=true></i> English version</a>
+          </div>
         </div>
-    </footer>
+      </aside>
+    </div>
 
-    <script defer type=module src=/mbdioui.github.io.726a3e4b.js></script>
+    <section class=project-media>
+      <h2 class=project-media__title>Démonstration</h2>
+      <div class=video-container>
+        <iframe src=https://www.youtube.com/embed/8YEGQFOHReU title="L'Application Ponant Demo" allowfullscreen></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class=detail-footer>
+    <div class=container>
+      <div class=detail-footer__social aria-label="Réseaux sociaux">
+        <a href=https://buymeacoffee.com/mbdioui target=_blank rel=noreferrer aria-label="Buy me a coffee"><i class="fa fa-coffee" aria-hidden=true></i></a>
+        <a href=https://www.linkedin.com/in/medsalahbdioui/ target=_blank rel=noreferrer aria-label=LinkedIn><i class="fa fa-linkedin" aria-hidden=true></i></a>
+        <a href=mailto:bdiouimedsalah@gmail.com aria-label=Email><i class="fa fa-envelope" aria-hidden=true></i></a>
+        <a href=https://github.com/mbdioui target=_blank rel=noreferrer aria-label=GitHub><i class="fa fa-github" aria-hidden=true></i></a>
+      </div>
+      <p class=detail-footer__text>
+        © 2026 — Développé par <a href=https://github.com/mbdioui target=_blank rel=noreferrer>Mohamed BDIOUI</a>
+      </p>
+    </div>
+  </footer>
+
+  <script defer type=module src=/project-elis-glad.d9002487.js></script>
+
 
 
