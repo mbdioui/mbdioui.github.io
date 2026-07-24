@@ -1,0 +1,310 @@
+<!DOCTYPE html><html lang="en" class="sr formation-page"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="/favicon.2a2e97fc.png">
+  <title>Mohamed BDIOUI | Lesson 1.2</title>
+  <meta name="description" content="Understand null safety and smart cast concepts in Kotlin to prevent null pointer errors in the Todo app">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/formation.4a508c1d.css">
+  <script defer="" src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <style>:root {
+  --color-bg: #f8fafc;
+  --color-surface: #fff;
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-primary: #10b981;
+  --color-primary-dark: #047857;
+  --color-secondary: #0ea5e9;
+  --color-secondary-dark: #0369a1;
+  --color-accent: #8b5cf6;
+  --color-border: #0f172a14;
+  --shadow-sm: 0 1px 2px 0 #0f172a0d;
+  --shadow-md: 0 4px 6px -1px #0f172a14, 0 2px 4px -2px #0f172a0a;
+  --shadow-lg: 0 10px 15px -3px #0f172a1a, 0 4px 6px -4px #0f172a0d;
+  --shadow-xl: 0 20px 25px -5px #0f172a1f, 0 8px 10px -6px #0f172a0a;
+  --radius-sm: .8rem;
+  --radius-md: 1.2rem;
+  --radius-lg: 2rem;
+  --radius-full: 9999px;
+  --transition-fast: .15s cubic-bezier(.4, 0, .2, 1);
+  --transition-base: .3s cubic-bezier(.4, 0, .2, 1);
+  --transition-slow: .5s cubic-bezier(.4, 0, .2, 1);
+  --container: min(90%, 1200px);
+  --header-height: 7rem;
+  --header-height-mobile: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, :before, :after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+</style>
+</head>
+
+<body>
+  <input type="checkbox" id="menu-toggle" class="sr-only" aria-hidden="true">
+
+  <header class="navbar">
+    <div class="navbar__container">
+      <a href="/index-us.html#top" class="navbar__brand" aria-label="Back to home">MB<span>.</span></a>
+
+      <label for="menu-toggle" class="navbar__toggle" aria-label="Open/close menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="navbar__menu" aria-label="Main navigation">
+        <a href="/index-us.html#about" class="navbar__link">About</a>
+        <a href="/index-us.html#experience" class="navbar__link">Experience</a>
+        <a href="/index-us.html#skills" class="navbar__link">Skills</a>
+        <a href="/index-us.html#projects" class="navbar__link">Projects</a>
+        <a href="/formation-us.html" class="navbar__link">Training</a>
+        <a href="/index-us.html#contact" class="navbar__link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="lesson-hero-title">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <div class="hero__intro">
+          <span class="hero__eyebrow">
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+            Lesson 1.2 · Module 1 · FREE
+          </span>
+          <h1 id="lesson-hero-title" class="hero__title">Null Safety and Smart Cast in Kotlin</h1>
+          <p class="hero__desc">Understand null safety and smart cast concepts in Kotlin to prevent null pointer errors in the Todo app</p>
+          <div class="hero__actions">
+            <a href="/formation-us.html" class="btn btn--outline">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i> Back to all lessons
+            </a>
+            <a href="#tab-quiz" class="btn btn--primary"><i class="fa fa-question-circle" aria-hidden="true"></i> Quiz</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__card">
+            <div class="lesson-hero-meta">
+              <div class="lesson-hero-meta__item">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <div>
+                  <span class="lesson-hero-meta__label">Duration</span>
+                  <span class="lesson-hero-meta__value">20 min</span>
+                </div>
+              </div>
+              <div class="lesson-hero-meta__item">
+                <i class="fa fa-bookmark" aria-hidden="true"></i>
+                <div>
+                  <span class="lesson-hero-meta__label">Module</span>
+                  <span class="lesson-hero-meta__value">1</span>
+                </div>
+              </div>
+              <div class="lesson-hero-meta__item">
+                <i class="fa fa-unlock" aria-hidden="true"></i>
+                <div>
+                  <span class="lesson-hero-meta__label">Access</span>
+                  <span class="lesson-hero-meta__value">FREE</span>
+                </div>
+              </div>
+              <div class="lesson-hero-meta__item">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                <div>
+                  <span class="lesson-hero-meta__label">Number</span>
+                  <span class="lesson-hero-meta__value">1.2</span>
+                </div>
+              </div>
+            </div>
+            <span class="hero__badge hero__badge--1">
+              <i class="fa fa-code" aria-hidden="true"></i>
+              Kotlin
+            </span>
+            <span class="hero__badge hero__badge--2">
+              <i class="fa fa-android" aria-hidden="true"></i>
+              Compose
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lesson-content section-padding">
+      <div class="container">
+        
+        <nav class="lesson-tabs" aria-label="Lesson sections">
+          <a class="lesson-tabs__btn is-active" href="#tab-theory"><i class="fa fa-book" aria-hidden="true"></i> Theory</a>
+          <a class="lesson-tabs__btn" href="#tab-exercise"><i class="fa fa-code" aria-hidden="true"></i> Exercise</a>
+          <a class="lesson-tabs__btn" href="#tab-quiz"><i class="fa fa-question-circle" aria-hidden="true"></i> Quiz</a>
+          <a class="lesson-tabs__btn" href="#tab-errors"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Common errors</a>
+          <a class="lesson-tabs__btn" href="#tab-resume"><i class="fa fa-list-alt" aria-hidden="true"></i> Summary</a>
+        </nav>
+        <div class="lesson-panels">
+      <section id="tab-theory" class="lesson-panel is-active">
+        <div class="detail-block">
+          <h3 class="detail-block__title">Theory</h3>
+          <p class="lesson-text">In Kotlin, null safety is a key feature that helps prevent null pointer exceptions. By default, types in Kotlin cannot be null. If you want a variable to be nullable, you must use the nullable type by adding a question mark (?) after the type. For example, String? can be either a string or null. Kotlin forces you to explicitly check if a nullable variable is null before using it. Smart cast is another powerful Kotlin feature. When you check a variable's type (with is) or verify it's not null (with != null), Kotlin remembers this check and allows you to use the variable as if it weren't nullable without explicitly casting it. This avoids manual casts and makes the code safer and more readable. In our Todo app, we'll use these concepts to handle tasks that might not have a title or description.</p>
+        </div>
+        <div class="lesson-analogie">
+          <span class="lesson-analogie__label">Analogy</span>
+          <p>Think of null safety as a security system in a building. If you're not on the guest list (nullable), you're not allowed in. Smart cast is like when the guard sees you once you've shown your badge - they remember you're authorized and let you through all areas without showing your badge at every door.</p>
+        </div>
+      </section>
+      <section id="tab-exercise" class="lesson-panel">
+        <div class="detail-block">
+          <h3 class="detail-block__title">Handling Null Tasks</h3>
+          <p class="lesson-text">Implement a displayTaskDetails function that takes a Task object as parameter and displays its title, description, and due date. The function should properly handle null fields by displaying 'Not specified' when a field is null. Use smart cast to avoid explicit casting.</p>
+        </div>
+        <div class="detail-block">
+          <span class="lesson-code-label">Starting code</span>
+          <pre class="lesson-code"><code>data class Task(val title: String?, val description: String?, val dueDate: String?)
+
+fun displayTaskDetails(task: Task) {
+    // To implement
+}</code></pre>
+        </div>
+        <h3 class="lesson-hints__title">Hints</h3><ol class="lesson-hints"><li>Use the Elvis operator (?:) to provide a default value when a nullable variable is null.</li><li>For the description, you can check if it's not null with if (task.description != null) then use smart cast.</li><li>For the due date, a when block can nicely handle both null and non-null cases.</li></ol>
+        <div class="detail-block">
+          <span class="lesson-code-label">Solution</span>
+          <pre class="lesson-code"><code>fun displayTaskDetails(task: Task) {
+    println("Title: ${task.title ?: "Not specified"}")
+    if (task.description != null) {
+        println("Description: ${task.description}")
+    } else {
+        println("Description: Not specified")
+    }
+    when {
+        task.dueDate != null -&gt; println("Due date: ${task.dueDate}")
+        else -&gt; println("Due date: Not specified")
+    }
+}</code></pre>
+        </div>
+      </section>
+      <section id="tab-quiz" class="lesson-panel">
+        <div class="lesson-quiz">
+      <div class="quiz-question" data-question="1">
+        <h4 class="quiz-question__title">
+          <span class="quiz-question__num">1</span>
+          <span>What does the String? type mean in Kotlin?</span>
+        </h4>
+        <div class="quiz-question__options"><button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">A</span><span>It's a string that cannot be null</span></button>
+<button class="quiz-option" data-correct="True" type="button"><span class="quiz-option-letter">B</span><span>It's a string that can be null</span></button>
+<button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">C</span><span>It's a string with at least one character length</span></button>
+<button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">D</span><span>It's a string that will be converted to null if it's empty</span></button>
+</div>
+        <div class="quiz-explanation">
+          <div class="quiz-explanation__icon"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Explanation</div>
+          <p class="quiz-explanation__text">In Kotlin, the String? type indicates that a variable can contain either a string or the null value. This is called a nullable type. The default non-null type is String, which cannot contain null.</p>
+        </div>
+      </div>
+      <div class="quiz-question" data-question="2">
+        <h4 class="quiz-question__title">
+          <span class="quiz-question__num">2</span>
+          <span>What is smart cast in Kotlin?</span>
+        </h4>
+        <div class="quiz-question__options"><button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">A</span><span>A function that automatically converts one type to another</span></button>
+<button class="quiz-option" data-correct="True" type="button"><span class="quiz-option-letter">B</span><span>Kotlin's ability to remember type and nullability checks and allow using a variable as if it weren't nullable without explicit casting</span></button>
+<button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">C</span><span>A method to manually cast a nullable variable to non-null</span></button>
+<button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">D</span><span>An operator that forces a variable to be non-null</span></button>
+</div>
+        <div class="quiz-explanation">
+          <div class="quiz-explanation__icon"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Explanation</div>
+          <p class="quiz-explanation__text">Smart cast is a Kotlin feature that allows using a variable as if it weren't nullable after checking that it isn't (with an if or when condition). For example, after checking 'if (x != null)', you can use x directly without having to cast to x!! or x?.</p>
+        </div>
+      </div>
+      <div class="quiz-question" data-question="3">
+        <h4 class="quiz-question__title">
+          <span class="quiz-question__num">3</span>
+          <span>How to display 'Not specified' when a nullable variable is null, otherwise display its value?</span>
+        </h4>
+        <div class="quiz-question__options"><button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">A</span><span>println(variable ?: 'Not specified')</span></button>
+<button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">B</span><span>println(variable ?: "Not specified")</span></button>
+<button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">C</span><span>println(variable == null ? "Not specified" : variable)</span></button>
+<button class="quiz-option" data-correct="True" type="button"><span class="quiz-option-letter">D</span><span>All of the above</span></button>
+</div>
+        <div class="quiz-explanation">
+          <div class="quiz-explanation__icon"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Explanation</div>
+          <p class="quiz-explanation__text">All these approaches are valid in Kotlin. The Elvis operator (?:) is the most concise method (answer B), but the other approaches work as well. Answer C uses a classic ternary operator, and answer A is almost correct but uses single quotes instead of double quotes for the string.</p>
+        </div>
+      </div></div>
+      </section>
+      <section id="tab-errors" class="lesson-panel">
+        
+      <div class="lesson-error">
+        <div class="lesson-error__icon"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
+        <div class="lesson-error__body">
+          <h4 class="lesson-error__title">fun displayTaskDetails(task: Task) {
+    println("Title: ${task.title}")
+    println("Description: ${task.description}")
+    println("Due date: ${task.dueDate}")
+}</h4>
+          <p class="lesson-error__why"><strong>Why :</strong> This code doesn't handle nullable fields. If task.title, task.description or task.dueDate is null, the app will throw a NullPointerException.</p>
+          <p class="lesson-error__fix"><strong>Fix :</strong> You need to check if each field is null before using it or provide a default value with the Elvis operator (?:).</p>
+        </div>
+      </div>
+      <div class="lesson-error">
+        <div class="lesson-error__icon"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
+        <div class="lesson-error__body">
+          <h4 class="lesson-error__title">fun displayTaskDetails(task: Task) {
+    println("Title: ${task.title!!}")
+    if (task.description != null) {
+        println("Description: ${task.description}")
+    }
+    if (task.dueDate != null) {
+        println("Due date: ${task.dueDate}")
+    }
+}</h4>
+          <p class="lesson-error__why"><strong>Why :</strong> Using the !! operator on the title can cause a RuntimeException if the title is null. Also, the code doesn't handle the case where description or dueDate is null by displaying an alternative.</p>
+          <p class="lesson-error__fix"><strong>Fix :</strong> Avoid using the !! operator which forces the cast and can cause exceptions. Instead, use the Elvis operator (?:) or explicitly check for null and provide an alternative.</p>
+        </div>
+      </div>
+      <div class="lesson-error">
+        <div class="lesson-error__icon"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
+        <div class="lesson-error__body">
+          <h4 class="lesson-error__title">fun displayTaskDetails(task: Task) {
+    val title = task.title as String
+    val description = task.description as String
+    val dueDate = task.dueDate as String
+    println("Title: $title")
+    println("Description: $description")
+    println("Due date: $dueDate")
+}</h4>
+          <p class="lesson-error__why"><strong>Why :</strong> This code tries to explicitly cast nullable fields to non-null without checking. If any of the fields is null, this will cause a ClassCastException instead of handling the case safely.</p>
+          <p class="lesson-error__fix"><strong>Fix :</strong> Use smart cast after verifying that variables aren't null, or use the Elvis operator (?:) to provide a default value.</p>
+        </div>
+      </div>
+      </section>
+      <section id="tab-resume" class="lesson-panel">
+        <div class="lesson-resume">Null safety and smart cast are two powerful Kotlin features that help write safer code by preventing null pointer errors. Nullable types (with ?) allow indicating that a variable can be null, and smart cast allows using these variables safely after verification. In our Todo app, these concepts allow us to handle optional task fields elegantly and without risk of error.</div>
+        <a class="lesson-next" href="/lecon-1-3-us.html"><i class="fa fa-arrow-right" aria-hidden="true"></i> Next lesson: <strong>1.3. Functions and Lambdas in Kotlin</strong></a>
+      </section></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__social" aria-label="Social media">
+        <a href="https://buymeacoffee.com/mbdioui" target="_blank" rel="noreferrer" aria-label="Buy me a coffee"><i class="fa fa-coffee" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/medsalahbdioui/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="mailto:bdiouimedsalah@gmail.com" aria-label="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a href="https://github.com/mbdioui" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+      </div>
+      <p class="footer__text">
+        © 2026 — Built by <a href="https://github.com/mbdioui" target="_blank" rel="noreferrer">Mohamed BDIOUI</a>
+      </p>
+    </div>
+  </footer>
+
+  <script defer="" type="module" src="/formation.31b563d9.js"></script>
+  <script defer="" type="module" src="/lecon-1-1-us.f79e380b.js"></script>
+
+
+
+</body></html>

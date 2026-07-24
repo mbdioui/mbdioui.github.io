@@ -99,4 +99,33 @@ export const targetElements = [
       origin: "bottom",
     },
   },
+  // Modern CV-style detail pages
+  {
+    element: ".project-sheet",
+    animation: {
+      delay: 400,
+      origin: "bottom",
+    },
+  },
+  {
+    element: ".detail-section",
+    animation: {
+      delay: 500,
+      origin: "bottom",
+    },
+  },
+  {
+    element: ".sidebar-box",
+    animation: {
+      delay: 600,
+      origin: window.innerWidth > 768 ? "right" : "bottom",
+    },
+  },
+  {
+    element: ".project-media",
+    animation: {
+      delay: 600,
+      origin: "bottom",
+    },
+  },
 ];

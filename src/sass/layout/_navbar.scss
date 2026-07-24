@@ -1,29 +1,33 @@
-#navbar {
+.navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
   height: 70px;
-  background: transparent;
-  transition: background 0.4s ease, box-shadow 0.4s ease;
+  background: rgba($white-color, 0.72);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba($dark-blue-text, 0.06);
+  transition: background 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
 
   &.scrolled {
-    background: $white-color;
-    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.08);
+    background: rgba($white-color, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border-color: rgba($dark-blue-text, 0.08);
   }
 
   .navbar__container {
+    width: var(--container);
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 2.4rem;
+    margin-inline: auto;
+    padding: 0;
   }
 
-  .navbar__logo {
+  .navbar__brand {
     font-size: 2.4rem;
     font-weight: 800;
     color: $dark-blue-text;
@@ -40,7 +44,7 @@
     }
   }
 
-  .navbar__links {
+  .navbar__menu {
     display: flex;
     align-items: center;
     list-style: none;
@@ -141,7 +145,7 @@
       display: flex;
     }
 
-    .navbar__links {
+    .navbar__menu {
       position: fixed;
       top: 60px;
       left: 0;
@@ -158,8 +162,10 @@
         opacity 0.35s ease;
       pointer-events: none;
       z-index: 999;
+    }
 
-      &.open {
+    @at-root {
+      #menu-toggle:checked ~ .navbar .navbar__menu {
         transform: translateY(0);
         opacity: 1;
         pointer-events: all;
@@ -178,11 +184,11 @@
   @include respond(phone) {
     height: 56px;
 
-    .navbar__logo {
+    .navbar__brand {
       font-size: 2rem;
     }
 
-    .navbar__links {
+    .navbar__menu {
       top: 56px;
     }
   }
@@ -202,7 +208,7 @@
     transition: opacity 0.2s ease, transform 0.2s ease;
   }
 
-  .navbar__lang-link {
+  .navbar__lang a {
     opacity: 0.45;
     text-decoration: none !important;
 
@@ -211,13 +217,13 @@
       transform: scale(1.1);
       text-decoration: none !important;
     }
+  }
 
-    &--active {
-      opacity: 1;
+  .navbar__lang--active {
+    opacity: 1;
 
-      .navbar__flag {
-        box-shadow: 0 0 0 2px $primary-color;
-      }
+    .navbar__flag {
+      box-shadow: 0 0 0 2px $primary-color;
     }
   }
 }

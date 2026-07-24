@@ -1,0 +1,375 @@
+<!DOCTYPE html><html lang="fr" class="sr formation-page"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" type="image/png" href="/favicon.2a2e97fc.png">
+  <title>Mohamed BDIOUI | Leçon 1.3</title>
+  <meta name="description" content="Comprendre comment créer des classes, instancier des objets et utiliser l'héritage en Kotlin pour structurer une application Todo Android.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="/formation.4a508c1d.css">
+  <script defer="" src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+  <style>:root {
+  --color-bg: #f8fafc;
+  --color-surface: #fff;
+  --color-text: #0f172a;
+  --color-text-muted: #475569;
+  --color-primary: #10b981;
+  --color-primary-dark: #047857;
+  --color-secondary: #0ea5e9;
+  --color-secondary-dark: #0369a1;
+  --color-accent: #8b5cf6;
+  --color-border: #0f172a14;
+  --shadow-sm: 0 1px 2px 0 #0f172a0d;
+  --shadow-md: 0 4px 6px -1px #0f172a14, 0 2px 4px -2px #0f172a0a;
+  --shadow-lg: 0 10px 15px -3px #0f172a1a, 0 4px 6px -4px #0f172a0d;
+  --shadow-xl: 0 20px 25px -5px #0f172a1f, 0 8px 10px -6px #0f172a0a;
+  --radius-sm: .8rem;
+  --radius-md: 1.2rem;
+  --radius-lg: 2rem;
+  --radius-full: 9999px;
+  --transition-fast: .15s cubic-bezier(.4, 0, .2, 1);
+  --transition-base: .3s cubic-bezier(.4, 0, .2, 1);
+  --transition-slow: .5s cubic-bezier(.4, 0, .2, 1);
+  --container: min(90%, 1200px);
+  --header-height: 7rem;
+  --header-height-mobile: 6rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, :before, :after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+</style>
+</head>
+
+<body>
+  <input type="checkbox" id="menu-toggle" class="sr-only" aria-hidden="true">
+
+  <header class="navbar">
+    <div class="navbar__container">
+      <a href="/index.html#top" class="navbar__brand" aria-label="Retour à l'accueil">MB<span>.</span></a>
+
+      <label for="menu-toggle" class="navbar__toggle" aria-label="Ouvrir/fermer le menu" role="button" tabindex="0">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="navbar__menu" aria-label="Navigation principale">
+        <a href="/index.html#about" class="navbar__link">À propos</a>
+        <a href="/index.html#experience" class="navbar__link">Expérience</a>
+        <a href="/index.html#skills" class="navbar__link">Compétences</a>
+        <a href="/index.html#projects" class="navbar__link">Projets</a>
+        <a href="/formation.html" class="navbar__link">Formation</a>
+        <a href="/index.html#contact" class="navbar__link">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="lesson-hero-title">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__grid" aria-hidden="true"></div>
+
+      <div class="hero__content">
+        <div class="hero__intro">
+          <span class="hero__eyebrow">
+            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+            Leçon 1.3 · Module 1 · OFFERT
+          </span>
+          <h1 id="lesson-hero-title" class="hero__title">Classes, Objets et Héritage en Kotlin</h1>
+          <p class="hero__desc">Comprendre comment créer des classes, instancier des objets et utiliser l'héritage en Kotlin pour structurer une application Todo Android.</p>
+          <div class="hero__actions">
+            <a href="/formation.html" class="btn btn--outline">
+              <i class="fa fa-arrow-left" aria-hidden="true"></i> Toutes les leçons
+            </a>
+            <a href="#tab-quiz" class="btn btn--primary"><i class="fa fa-question-circle" aria-hidden="true"></i> Quiz</a>
+          </div>
+        </div>
+
+        <div class="hero__visual">
+          <div class="hero__card">
+            <div class="lesson-hero-meta">
+              <div class="lesson-hero-meta__item">
+                <i class="fa fa-clock-o" aria-hidden="true"></i>
+                <div>
+                  <span class="lesson-hero-meta__label">Durée</span>
+                  <span class="lesson-hero-meta__value">25 min</span>
+                </div>
+              </div>
+              <div class="lesson-hero-meta__item">
+                <i class="fa fa-bookmark" aria-hidden="true"></i>
+                <div>
+                  <span class="lesson-hero-meta__label">Module</span>
+                  <span class="lesson-hero-meta__value">1</span>
+                </div>
+              </div>
+              <div class="lesson-hero-meta__item">
+                <i class="fa fa-unlock" aria-hidden="true"></i>
+                <div>
+                  <span class="lesson-hero-meta__label">Accès</span>
+                  <span class="lesson-hero-meta__value">OFFERT</span>
+                </div>
+              </div>
+              <div class="lesson-hero-meta__item">
+                <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                <div>
+                  <span class="lesson-hero-meta__label">Numéro</span>
+                  <span class="lesson-hero-meta__value">1.3</span>
+                </div>
+              </div>
+            </div>
+            <span class="hero__badge hero__badge--1">
+              <i class="fa fa-code" aria-hidden="true"></i>
+              Kotlin
+            </span>
+            <span class="hero__badge hero__badge--2">
+              <i class="fa fa-android" aria-hidden="true"></i>
+              Compose
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lesson-content section-padding">
+      <div class="container">
+        
+        <nav class="lesson-tabs" aria-label="Lesson sections">
+          <a class="lesson-tabs__btn is-active" href="#tab-theory"><i class="fa fa-book" aria-hidden="true"></i> Théorie</a>
+          <a class="lesson-tabs__btn" href="#tab-exercise"><i class="fa fa-code" aria-hidden="true"></i> Exercice</a>
+          <a class="lesson-tabs__btn" href="#tab-quiz"><i class="fa fa-question-circle" aria-hidden="true"></i> Quiz</a>
+          <a class="lesson-tabs__btn" href="#tab-errors"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i> Erreurs courantes</a>
+          <a class="lesson-tabs__btn" href="#tab-resume"><i class="fa fa-list-alt" aria-hidden="true"></i> Résumé</a>
+        </nav>
+        <div class="lesson-panels">
+      <section id="tab-theory" class="lesson-panel is-active">
+        <div class="detail-block">
+          <h3 class="detail-block__title">Théorie</h3>
+          <p class="lesson-text">En Kotlin, une classe est un modèle qui décrit les caractéristiques et les comportements d'un objet. On la déclare avec le mot-clé 'class'. Par exemple, dans notre application Todo, une tâche peut être modélisée par une classe TodoItem avec des propriétés comme le titre, la description et l'état de complétion.
+
+Une classe peut avoir un constructeur primaire défini directement dans l'en-tête de la classe. Les propriétés peuvent être déclarées avec 'val' (immuable) ou 'var' (mutable) directement dans ce constructeur. Par exemple : class TodoItem(val id: Int, var titre: String, var estComplete: Boolean). Pour créer un objet, on instancie la classe sans le mot-clé 'new' (contrairement à Java) : val tache = TodoItem(1, 'Faire les courses', false).
+
+Kotlin introduit également les 'data class', particulièrement utiles pour les modèles de données. Elles génèrent automatiquement les méthodes equals(), hashCode(), toString() et copy(). Elles sont idéales pour représenter des données comme nos tâches Todo.
+
+Les classes peuvent aussi avoir des méthodes (fonctions membres) qui définissent leurs comportements. Par exemple, une méthode completer() qui change l'état de la tâche.
+
+L'héritage permet à une classe d'hériter des propriétés et méthodes d'une autre classe. En Kotlin, les classes sont 'final' par défaut, ce qui signifie qu'elles ne peuvent pas être héritées sauf si on les déclare avec le mot-clé 'open'. La classe fille utilise ':' suivi du nom de la classe parente avec ses arguments. Par exemple, une classe TacheUrgente qui hérite de TodoItem.
+
+Le mot-clé 'override' est obligatoire pour redéfinir une méthode héritée. La classe parente doit aussi déclarer la méthode avec 'open' pour permettre la redéfinition. On peut appeler la méthode parente avec 'super.nomMethode()'.
+
+Kotlin supporte aussi les classes abstraites (abstract class) qui ne peuvent pas être instanciées directement et servent de base pour d'autres classes. Les interfaces définissent des contrats que les classes doivent respecter, avec la possibilité d'avoir des implémentations par défaut. Dans notre app Todo, on pourrait définir une interface Completable avec une méthode completer(), que toutes les tâches devront implémenter.
+
+Enfin, les 'object' en Kotlin permettent de créer des singletons, des instances uniques d'une classe. Utile pour des gestionnaires de données comme un TodoRepository.</p>
+        </div>
+        <div class="lesson-analogie">
+          <span class="lesson-analogie__label">Analogie</span>
+          <p>Imaginez une classe comme un formulaire vierge pour créer des tâches Todo. Le formulaire définit les champs (titre, description, priorité). Chaque fois que vous remplissez un formulaire, vous créez un objet unique (une tâche spécifique). L'héritage, c'est comme avoir un formulaire spécialisé pour les tâches urgentes qui reprend tous les champs du formulaire de base, mais en ajoute quelques-uns supplémentaires comme la date limite ou le niveau d'alerte.</p>
+        </div>
+      </section>
+      <section id="tab-exercise" class="lesson-panel">
+        <div class="detail-block">
+          <h3 class="detail-block__title">Modéliser les tâches de l'application Todo</h3>
+          <p class="lesson-text">1. Crée une classe de base ouverte 'Tache' avec les propriétés id (Int), titre (String), description (String) et estComplete (Boolean avec valeur par défaut false). 2. Ajoute une méthode open 'afficherDetails()' qui retourne une String avec le titre et l'état. 3. Crée une data class 'TodoItem' qui hérite de Tache et ajoute une propriété categorie (String). 4. Crée une classe 'TacheAvecRappel' qui hérite de Tache et ajoute une propriété rappelMinutes (Int). Override la méthode afficherDetails() pour inclure le rappel. 5. Dans le main, instancie un TodoItem et une TacheAvecRappel, puis appelle afficherDetails() sur chacun.</p>
+        </div>
+        <div class="detail-block">
+          <span class="lesson-code-label">Code de départ</span>
+          <pre class="lesson-code"><code>// Lecon 1.3 - Classes, Objets et Heritage
+// Complete le code ci-dessous
+
+// 1. Declare la classe de base Tache (open)
+open class Tache(
+    val id: Int,
+    // Ajoute les proprietes manquantes : titre, description, estComplete
+) {
+    // 2. Ajoute la methode open afficherDetails()
+}
+
+// 3. Declare la data class TodoItem qui herite de Tache
+// Ajoute la propriete categorie
+
+// 4. Declare TacheAvecRappel qui herite de Tache
+// Ajoute rappelMinutes et override afficherDetails()
+
+fun main() {
+    // 5. Instancie un TodoItem
+    val tache1 = // ...
+    
+    // 6. Instancie une TacheAvecRappel
+    val tache2 = // ...
+    
+    println(tache1.afficherDetails())
+    println(tache2.afficherDetails())
+}</code></pre>
+        </div>
+        <h3 class="lesson-hints__title">Indices</h3><ol class="lesson-hints"><li>Pour déclarer une classe ouverte (héritables), utilise le mot-clé 'open' avant 'class'. Les propriétés dans le constructeur primaire utilisent 'val' pour immuable et 'var' pour mutable.</li><li>Pour hériter d'une classe, utilise ':' suivi du nom de la classe parente avec ses arguments entre parenthèses. Assure-toi que la classe parente est déclarée 'open'.</li><li>Pour appeler la méthode de la classe parente dans une méthode overridée, utilise 'super.afficherDetails()'. N'oublie pas le mot-clé 'override' avant 'fun'.</li></ol>
+        <div class="detail-block">
+          <span class="lesson-code-label">Solution</span>
+          <pre class="lesson-code"><code>// Lecon 1.3 - Classes, Objets et Heritage
+// Solution complete
+
+// 1. Classe de base ouverte
+open class Tache(
+    val id: Int,
+    var titre: String,
+    var description: String,
+    var estComplete: Boolean = false
+) {
+    // 2. Methode open pour permettre l override
+    open fun afficherDetails(): String {
+        val statut = if (estComplete) 'Terminee' else 'En cours'
+        return 'Tache: $titre | Statut: $statut'
+    }
+}
+
+// 3. Data class qui herite de Tache
+data class TodoItem(
+    val itemId: Int,
+    val itemTitre: String,
+    val itemDescription: String,
+    val categorie: String,
+    val itemEstComplete: Boolean = false
+) : Tache(itemId, itemTitre, itemDescription, itemEstComplete)
+
+// 4. Classe avec rappel qui herite de Tache
+class TacheAvecRappel(
+    id: Int,
+    titre: String,
+    description: String,
+    estComplete: Boolean = false,
+    val rappelMinutes: Int
+) : Tache(id, titre, description, estComplete) {
+    override fun afficherDetails(): String {
+        val base = super.afficherDetails()
+        return '$base | Rappel dans: $rappelMinutes min'
+    }
+}
+
+fun main() {
+    // 5. Instanciation d un TodoItem
+    val tache1 = TodoItem(
+        itemId = 1,
+        itemTitre = 'Acheter du lait',
+        itemDescription = 'Aller au supermarche',
+        categorie = 'Courses'
+    )
+
+    // 6. Instanciation d une TacheAvecRappel
+    val tache2 = TacheAvecRappel(
+        id = 2,
+        titre = 'Reunion equipe',
+        description = 'Preparer les slides',
+        rappelMinutes = 30
+    )
+
+    println(tache1.afficherDetails())
+    println(tache2.afficherDetails())
+}</code></pre>
+        </div>
+      </section>
+      <section id="tab-quiz" class="lesson-panel">
+        <div class="lesson-quiz">
+      <div class="quiz-question" data-question="1">
+        <h4 class="quiz-question__title">
+          <span class="quiz-question__num">1</span>
+          <span>Quelle est la différence principale entre une classe normale et une 'data class' en Kotlin ?</span>
+        </h4>
+        <div class="quiz-question__options"><button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">A</span><span>Une data class ne peut pas avoir de méthodes</span></button>
+<button class="quiz-option" data-correct="True" type="button"><span class="quiz-option-letter">B</span><span>Une data class génère automatiquement equals(), hashCode(), toString() et copy()</span></button>
+<button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">C</span><span>Une data class est toujours abstraite</span></button>
+<button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">D</span><span>Une data class ne peut pas hériter d'une autre classe</span></button>
+</div>
+        <div class="quiz-explanation">
+          <div class="quiz-explanation__icon"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Explication</div>
+          <p class="quiz-explanation__text">Une data class génère automatiquement les méthodes equals(), hashCode(), toString() et copy() basées sur les propriétés du constructeur primaire, ce qui est très utile pour les modèles de données comme nos TodoItem.</p>
+        </div>
+      </div>
+      <div class="quiz-question" data-question="2">
+        <h4 class="quiz-question__title">
+          <span class="quiz-question__num">2</span>
+          <span>Pourquoi les classes Kotlin sont-elles 'final' par défaut ?</span>
+        </h4>
+        <div class="quiz-question__options"><button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">A</span><span>Pour des raisons de performance uniquement</span></button>
+<button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">B</span><span>C'est une erreur de conception de Kotlin</span></button>
+<button class="quiz-option" data-correct="True" type="button"><span class="quiz-option-letter">C</span><span>Pour encourager une conception prudente de l'héritage et éviter les bugs liés à une héritage non intentionnel</span></button>
+<button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">D</span><span>Pour être compatible avec Java</span></button>
+</div>
+        <div class="quiz-explanation">
+          <div class="quiz-explanation__icon"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Explication</div>
+          <p class="quiz-explanation__text">En Kotlin, les classes sont final par défaut pour encourager une conception réfléchie. L'héritage peut introduire des bugs si une classe n'est pas conçue pour être héritée. On doit explicitement marquer une classe 'open' pour autoriser l'héritage, ce qui force le développeur à y réfléchir.</p>
+        </div>
+      </div>
+      <div class="quiz-question" data-question="3">
+        <h4 class="quiz-question__title">
+          <span class="quiz-question__num">3</span>
+          <span>Comment appelle-t-on la méthode de la classe parente depuis une méthode overridée ?</span>
+        </h4>
+        <div class="quiz-question__options"><button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">A</span><span>parent.nomMethode()</span></button>
+<button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">B</span><span>base.nomMethode()</span></button>
+<button class="quiz-option" data-correct="True" type="button"><span class="quiz-option-letter">C</span><span>super.nomMethode()</span></button>
+<button class="quiz-option" data-correct="False" type="button"><span class="quiz-option-letter">D</span><span>this.super.nomMethode()</span></button>
+</div>
+        <div class="quiz-explanation">
+          <div class="quiz-explanation__icon"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Explication</div>
+          <p class="quiz-explanation__text">En Kotlin (comme en Java), on utilise le mot-clé 'super' pour référencer la classe parente. super.afficherDetails() appelle l'implémentation de la méthode afficherDetails() définie dans la classe parente, permettant de la réutiliser et d'y ajouter du comportement.</p>
+        </div>
+      </div></div>
+      </section>
+      <section id="tab-errors" class="lesson-panel">
+        
+      <div class="lesson-error">
+        <div class="lesson-error__icon"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
+        <div class="lesson-error__body">
+          <h4 class="lesson-error__title">class TacheUrgente : Tache(id, titre) { ... }</h4>
+          <p class="lesson-error__why"><strong>Pourquoi :</strong> Cette erreur se produit quand la classe Tache n'est pas déclarée 'open'. Kotlin retourne l'erreur : 'This type is final, so it cannot be inherited from'.</p>
+          <p class="lesson-error__fix"><strong>Correction :</strong> Ajoute le mot-clé 'open' avant 'class Tache' : open class Tache(val id: Int, var titre: String). Sans 'open', aucune classe ne peut hériter de Tache.</p>
+        </div>
+      </div>
+      <div class="lesson-error">
+        <div class="lesson-error__icon"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
+        <div class="lesson-error__body">
+          <h4 class="lesson-error__title">override fun afficherDetails(): String { return 'Tache: ' + titre }</h4>
+          <p class="lesson-error__why"><strong>Pourquoi :</strong> Le mot-clé 'override' est utilisé sans que la méthode dans la classe parente soit déclarée 'open'. Kotlin retourne : 'afficherDetails' hides member of supertype and needs override modifier, ou la méthode n'est pas overridable.</p>
+          <p class="lesson-error__fix"><strong>Correction :</strong> Dans la classe parente, déclare la méthode avec 'open' : open fun afficherDetails(): String { ... }. Le mot-clé 'open' est nécessaire sur la méthode parente ET 'override' sur la méthode fille.</p>
+        </div>
+      </div>
+      <div class="lesson-error">
+        <div class="lesson-error__icon"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></div>
+        <div class="lesson-error__body">
+          <h4 class="lesson-error__title">val tache = new TodoItem(1, 'Tache', 'Desc', 'Travail')</h4>
+          <p class="lesson-error__why"><strong>Pourquoi :</strong> En Kotlin, le mot-clé 'new' n'existe pas pour instancier des objets. C'est une erreur fréquente des développeurs venant de Java.</p>
+          <p class="lesson-error__fix"><strong>Correction :</strong> Supprime le mot-clé 'new' : val tache = TodoItem(1, 'Tache', 'Desc', 'Travail'). En Kotlin, on instancie une classe directement en appelant son constructeur comme une fonction ordinaire.</p>
+        </div>
+      </div>
+      </section>
+      <section id="tab-resume" class="lesson-panel">
+        <div class="lesson-resume">Dans cette leçon, tu as appris à créer des classes avec des constructeurs primaires, à instancier des objets sans le mot-clé 'new', à utiliser les data classes pour les modèles de données, à mettre en place l'héritage avec 'open' et ':', à overrider des méthodes avec 'override' et à appeler la méthode parente avec 'super'. Ces concepts sont fondamentaux pour structurer les données de ton application Todo Android.</div>
+        <a class="lesson-next" href="/lecon-1-4.html"><i class="fa fa-arrow-right" aria-hidden="true"></i> Leçon suivante : <strong>Leçon 1.4 : Interfaces et classes abstraites en Kotlin - Nous approfondirons la conception orientée objet avec les interfaces et les classes abstraites pour créer une architecture plus flexible pour notre application Todo.</strong></a>
+      </section></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__social" aria-label="Réseaux sociaux">
+        <a href="https://buymeacoffee.com/mbdioui" target="_blank" rel="noreferrer" aria-label="Buy me a coffee"><i class="fa fa-coffee" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/medsalahbdioui/" target="_blank" rel="noreferrer" aria-label="LinkedIn"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a href="mailto:bdiouimedsalah@gmail.com" aria-label="Email"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+        <a href="https://github.com/mbdioui" target="_blank" rel="noreferrer" aria-label="GitHub"><i class="fa fa-github" aria-hidden="true"></i></a>
+      </div>
+      <p class="footer__text">
+        © 2026 — Développé par <a href="https://github.com/mbdioui" target="_blank" rel="noreferrer">Mohamed BDIOUI</a>
+      </p>
+    </div>
+  </footer>
+
+  <script defer="" type="module" src="/formation.31b563d9.js"></script>
+  <script defer="" type="module" src="/lecon-1-1-us.f79e380b.js"></script>
+
+
+
+</body></html>
