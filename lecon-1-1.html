@@ -1,0 +1,242 @@
+<!DOCTYPE html><html lang=fr class="formation-page sr"><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1"><link rel="icon shortcut" type=image/png href=/favicon.ea990870.png><title>Mohamed BDIOUI | Leçon 1.1</title><meta name=description content="Comprendre les bases de Kotlin : déclarer des variables, utiliser les types de données et créer des fonctions simples"><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css><link rel=stylesheet href=/formation.3000e8e6.css><script defer src=https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js></script><style>:root{--color-bg:#f8fafc;--color-surface:#fff;--color-text:#0f172a;--color-text-muted:#475569;--color-primary:#10b981;--color-primary-dark:#047857;--color-secondary:#0ea5e9;--color-secondary-dark:#0369a1;--color-accent:#8b5cf6;--color-border:#0f172a14;--shadow-sm:0 1px 2px 0 #0f172a0d;--shadow-md:0 4px 6px -1px #0f172a14, 0 2px 4px -2px #0f172a0a;--shadow-lg:0 10px 15px -3px #0f172a1a, 0 4px 6px -4px #0f172a0d;--shadow-xl:0 20px 25px -5px #0f172a1f, 0 8px 10px -6px #0f172a0a;--radius-sm:.8rem;--radius-md:1.2rem;--radius-lg:2rem;--radius-full:9999px;--transition-fast:.15s cubic-bezier(.4, 0, .2, 1);--transition-base:.3s cubic-bezier(.4, 0, .2, 1);--transition-slow:.5s cubic-bezier(.4, 0, .2, 1);--container:min(90%, 1200px);--header-height:7rem;--header-height-mobile:6rem}@media (prefers-reduced-motion:reduce){*,:before,:after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}</style><body>
+  <input type=checkbox id=menu-toggle class=sr-only aria-hidden=true>
+
+  <header class=navbar>
+    <div class=navbar__container>
+      <a href=/index.html#top class=navbar__brand aria-label="Retour à l'accueil">MB<span>.</span></a>
+
+      <label for=menu-toggle class=navbar__toggle aria-label="Ouvrir/fermer le menu" role=button tabindex=0>
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class=navbar__menu aria-label="Navigation principale">
+        <a href=/index.html#about class=navbar__link>À propos</a>
+        <a href=/index.html#experience class=navbar__link>Expérience</a>
+        <a href=/index.html#skills class=navbar__link>Compétences</a>
+        <a href=/index.html#projects class=navbar__link>Projets</a>
+        <a href=/formation.html class=navbar__link>Formation</a>
+        <a href=/index.html#contact class=navbar__link>Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id=top>
+    <section class=hero aria-labelledby=lesson-hero-title>
+      <div class=hero__bg aria-hidden=true></div>
+      <div class=hero__grid aria-hidden=true></div>
+
+      <div class=hero__content>
+        <div class=hero__intro>
+          <span class=hero__eyebrow>
+            <i class="fa fa-graduation-cap" aria-hidden=true></i>
+            Leçon 1.1 · Module 1 · OFFERT
+          </span>
+          <h1 id=lesson-hero-title class=hero__title>Introduction aux variables, types et fonctions en Kotlin</h1>
+          <p class=hero__desc>Comprendre les bases de Kotlin : déclarer des variables, utiliser les types de données et créer des fonctions simples</p>
+          <div class=hero__actions>
+            <a href=/formation.html class="btn btn--outline">
+              <i class="fa fa-arrow-left" aria-hidden=true></i> Toutes les leçons
+            </a>
+            <a href=#tab-quiz class="btn btn--primary"><i class="fa fa-question-circle" aria-hidden=true></i> Quiz</a>
+          </div>
+        </div>
+
+        <div class=hero__visual>
+          <div class=hero__card>
+            <div class=lesson-hero-meta>
+              <div class=lesson-hero-meta__item>
+                <i class="fa fa-clock-o" aria-hidden=true></i>
+                <div>
+                  <span class=lesson-hero-meta__label>Durée</span>
+                  <span class=lesson-hero-meta__value>20 min</span>
+                </div>
+              </div>
+              <div class=lesson-hero-meta__item>
+                <i class="fa fa-bookmark" aria-hidden=true></i>
+                <div>
+                  <span class=lesson-hero-meta__label>Module</span>
+                  <span class=lesson-hero-meta__value>1</span>
+                </div>
+              </div>
+              <div class=lesson-hero-meta__item>
+                <i class="fa fa-unlock" aria-hidden=true></i>
+                <div>
+                  <span class=lesson-hero-meta__label>Accès</span>
+                  <span class=lesson-hero-meta__value>OFFERT</span>
+                </div>
+              </div>
+              <div class=lesson-hero-meta__item>
+                <i class="fa fa-graduation-cap" aria-hidden=true></i>
+                <div>
+                  <span class=lesson-hero-meta__label>Numéro</span>
+                  <span class=lesson-hero-meta__value>1.1</span>
+                </div>
+              </div>
+            </div>
+            <span class="hero__badge hero__badge--1">
+              <i class="fa fa-code" aria-hidden=true></i>
+              Kotlin
+            </span>
+            <span class="hero__badge hero__badge--2">
+              <i class="fa fa-android" aria-hidden=true></i>
+              Compose
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lesson-content section-padding">
+      <div class=container>
+        
+        <nav class=lesson-tabs aria-label="Lesson sections">
+          <a class="is-active lesson-tabs__btn" href=#tab-theory><i class="fa fa-book" aria-hidden=true></i> Théorie</a>
+          <a class=lesson-tabs__btn href=#tab-exercise><i class="fa fa-code" aria-hidden=true></i> Exercice</a>
+          <a class=lesson-tabs__btn href=#tab-quiz><i class="fa fa-question-circle" aria-hidden=true></i> Quiz</a>
+          <a class=lesson-tabs__btn href=#tab-errors><i class="fa fa-exclamation-triangle" aria-hidden=true></i> Erreurs courantes</a>
+          <a class=lesson-tabs__btn href=#tab-resume><i class="fa fa-list-alt" aria-hidden=true></i> Résumé</a>
+        </nav>
+        <div class=lesson-panels>
+      <section id=tab-theory class="is-active lesson-panel">
+        <div class=detail-block>
+          <h3 class=detail-block__title>Théorie</h3>
+          <p class=lesson-text>Kotlin est un langage de programmation moderne utilisé pour développer des applications Android. Il permet de déclarer des variables avec des types de données spécifiques comme Int, String, Boolean, etc. Les fonctions sont des blocs de code réutilisables qui effectuent des tâches spécifiques.</p>
+        </div>
+        <div class=lesson-analogie>
+          <span class=lesson-analogie__label>Analogie</span>
+          <p>Imagine une cuisine : les variables sont comme les ingrédients (farine, sucre, œufs), chaque ingrédient a un type (solide, liquide). Les fonctions sont comme les recettes qui utilisent ces ingrédients pour créer un plat.</p>
+        </div>
+      </section>
+      <section id=tab-exercise class=lesson-panel>
+        <div class=detail-block>
+          <h3 class=detail-block__title>Créer une fonction simple</h3>
+          <p class=lesson-text>Écris une fonction qui prend deux nombres en paramètre et retourne leur somme.</p>
+        </div>
+        <div class=detail-block>
+          <span class=lesson-code-label>Code de départ</span>
+          <pre class=lesson-code><code>fun main() {
+    // Déclare deux variables de type Int
+    val a = 5
+    val b = 10
+    // Appelle ta fonction ici
+}</code></pre>
+        </div>
+        <h3 class=lesson-hints__title>Indices</h3><ol class=lesson-hints><li>Commence par le mot-clé fun<li>Déclare les paramètres entre parenthèses<li>Utilise l'opérateur + pour additionner</ol>
+        <div class=detail-block>
+          <span class=lesson-code-label>Solution</span>
+          <pre class=lesson-code><code>fun somme(a: Int, b: Int): Int {
+    return a + b
+}
+
+fun main() {
+    val a = 5
+    val b = 10
+    val resultat = somme(a, b)
+    println("La somme est : $resultat")
+}</code></pre>
+        </div>
+      </section>
+      <section id=tab-quiz class=lesson-panel>
+        <div class=lesson-quiz>
+      <div class=quiz-question data-question=1>
+        <h4 class=quiz-question__title>
+          <span class=quiz-question__num>1</span>
+          <span>Quel mot-clé utilise-t-on pour déclarer une variable modifiable en Kotlin ?</span>
+        </h4>
+        <div class=quiz-question__options><button class=quiz-option data-correct=False type=button><span class=quiz-option-letter>A</span><span>val</span></button>
+<button class=quiz-option data-correct=True type=button><span class=quiz-option-letter>B</span><span>var</span></button>
+<button class=quiz-option data-correct=False type=button><span class=quiz-option-letter>C</span><span>fun</span></button>
+<button class=quiz-option data-correct=False type=button><span class=quiz-option-letter>D</span><span>const</span></button>
+</div>
+        <div class=quiz-explanation>
+          <div class=quiz-explanation__icon><i class="fa fa-lightbulb-o" aria-hidden=true></i> Explication</div>
+          <p class=quiz-explanation__text>Le mot-clé var permet de déclarer une variable modifiable, contrairement à val qui crée une variable immuable.</p>
+        </div>
+      </div>
+      <div class=quiz-question data-question=2>
+        <h4 class=quiz-question__title>
+          <span class=quiz-question__num>2</span>
+          <span>Quel type de données est utilisé pour représenter du texte en Kotlin ?</span>
+        </h4>
+        <div class=quiz-question__options><button class=quiz-option data-correct=False type=button><span class=quiz-option-letter>A</span><span>Int</span></button>
+<button class=quiz-option data-correct=True type=button><span class=quiz-option-letter>B</span><span>String</span></button>
+<button class=quiz-option data-correct=False type=button><span class=quiz-option-letter>C</span><span>Boolean</span></button>
+<button class=quiz-option data-correct=False type=button><span class=quiz-option-letter>D</span><span>Char</span></button>
+</div>
+        <div class=quiz-explanation>
+          <div class=quiz-explanation__icon><i class="fa fa-lightbulb-o" aria-hidden=true></i> Explication</div>
+          <p class=quiz-explanation__text>Le type String est utilisé pour représenter du texte en Kotlin.</p>
+        </div>
+      </div>
+      <div class=quiz-question data-question=3>
+        <h4 class=quiz-question__title>
+          <span class=quiz-question__num>3</span>
+          <span>Comment appelle-t-on un bloc de code qui effectue une tâche spécifique et peut être réutilisé ?</span>
+        </h4>
+        <div class=quiz-question__options><button class=quiz-option data-correct=False type=button><span class=quiz-option-letter>A</span><span>Variable</span></button>
+<button class=quiz-option data-correct=False type=button><span class=quiz-option-letter>B</span><span>Type</span></button>
+<button class=quiz-option data-correct=True type=button><span class=quiz-option-letter>C</span><span>Fonction</span></button>
+<button class=quiz-option data-correct=False type=button><span class=quiz-option-letter>D</span><span>Classe</span></button>
+</div>
+        <div class=quiz-explanation>
+          <div class=quiz-explanation__icon><i class="fa fa-lightbulb-o" aria-hidden=true></i> Explication</div>
+          <p class=quiz-explanation__text>Une fonction est un bloc de code réutilisable qui effectue une tâche spécifique.</p>
+        </div>
+      </div></div>
+      </section>
+      <section id=tab-errors class=lesson-panel>
+        
+      <div class=lesson-error>
+        <div class=lesson-error__icon><i class="fa fa-exclamation-triangle" aria-hidden=true></i></div>
+        <div class=lesson-error__body>
+          <h4 class=lesson-error__title>J'ai oublié de spécifier le type de retour de ma fonction</h4>
+          <p class=lesson-error__why><strong>Pourquoi :</strong> Kotlin est un langage typé statiquement qui nécessite de connaître le type de retour</p>
+          <p class=lesson-error__fix><strong>Correction :</strong> Ajoute le type de retour après les parenthèses : fun nomFonction(): Int</p>
+        </div>
+      </div>
+      <div class=lesson-error>
+        <div class=lesson-error__icon><i class="fa fa-exclamation-triangle" aria-hidden=true></i></div>
+        <div class=lesson-error__body>
+          <h4 class=lesson-error__title>J'ai utilisé val au lieu de var pour une variable que je veux modifier</h4>
+          <p class=lesson-error__why><strong>Pourquoi :</strong> val crée une variable immuable qui ne peut pas être modifiée après sa déclaration</p>
+          <p class=lesson-error__fix><strong>Correction :</strong> Utilise var pour les variables qui doivent être modifiées</p>
+        </div>
+      </div>
+      <div class=lesson-error>
+        <div class=lesson-error__icon><i class="fa fa-exclamation-triangle" aria-hidden=true></i></div>
+        <div class=lesson-error__body>
+          <h4 class=lesson-error__title>J'ai oublié les deux-points entre le nom de la variable et son type</h4>
+          <p class=lesson-error__why><strong>Pourquoi :</strong> En Kotlin, les deux-points (:) séparent le nom de la variable de son type</p>
+          <p class=lesson-error__fix><strong>Correction :</strong> Ajoute les deux-points : var nomVariable: Type</p>
+        </div>
+      </div>
+      </section>
+      <section id=tab-resume class=lesson-panel>
+        <div class=lesson-resume>Tu as appris à déclarer des variables avec var et val, à utiliser les types de données de base comme Int et String, et à créer des fonctions simples. Ces concepts sont fondamentaux pour la programmation en Kotlin.</div>
+        <a class=lesson-next href=/lecon-1-2.html><i class="fa fa-arrow-right" aria-hidden=true></i> Leçon suivante : <strong>Lecon 1.2 - Null safety et smart cast en Kotlin</strong></a>
+      </section></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class=footer>
+    <div class=container>
+      <div class=footer__social aria-label="Réseaux sociaux">
+        <a href=https://buymeacoffee.com/mbdioui target=_blank rel=noreferrer aria-label="Buy me a coffee"><i class="fa fa-coffee" aria-hidden=true></i></a>
+        <a href=https://www.linkedin.com/in/medsalahbdioui/ target=_blank rel=noreferrer aria-label=LinkedIn><i class="fa fa-linkedin" aria-hidden=true></i></a>
+        <a href=mailto:bdiouimedsalah@gmail.com aria-label=Email><i class="fa fa-envelope" aria-hidden=true></i></a>
+        <a href=https://github.com/mbdioui target=_blank rel=noreferrer aria-label=GitHub><i class="fa fa-github" aria-hidden=true></i></a>
+      </div>
+      <p class=footer__text>
+        © 2026 — Développé par <a href=https://github.com/mbdioui target=_blank rel=noreferrer>Mohamed BDIOUI</a>
+      </p>
+    </div>
+  </footer>
+
+  <script defer type=module src=/formation.67a45e1f.js></script>
+  <script defer type=module src=/lecon-1-1-us.b11c525b.js></script>
+
+
+

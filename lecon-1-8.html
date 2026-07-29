@@ -1,0 +1,141 @@
+<!DOCTYPE html><html lang=fr class="formation-page sr"><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width, initial-scale=1"><link rel="icon shortcut" type=image/png href=/favicon.ea990870.png><title>Mohamed BDIOUI | Leçon 1.8</title><meta name=description content="Maîtriser les étapes du cycle de vie d'une Activity Android et savoir réagir aux changements d'état pour gérer correctement les ressources."><link rel=stylesheet href=https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css><link rel=stylesheet href=/formation.3000e8e6.css><script defer src=https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js></script><style>:root{--color-bg:#f8fafc;--color-surface:#fff;--color-text:#0f172a;--color-text-muted:#475569;--color-primary:#10b981;--color-primary-dark:#047857;--color-secondary:#0ea5e9;--color-secondary-dark:#0369a1;--color-accent:#8b5cf6;--color-border:#0f172a14;--shadow-sm:0 1px 2px 0 #0f172a0d;--shadow-md:0 4px 6px -1px #0f172a14, 0 2px 4px -2px #0f172a0a;--shadow-lg:0 10px 15px -3px #0f172a1a, 0 4px 6px -4px #0f172a0d;--shadow-xl:0 20px 25px -5px #0f172a1f, 0 8px 10px -6px #0f172a0a;--radius-sm:.8rem;--radius-md:1.2rem;--radius-lg:2rem;--radius-full:9999px;--transition-fast:.15s cubic-bezier(.4, 0, .2, 1);--transition-base:.3s cubic-bezier(.4, 0, .2, 1);--transition-slow:.5s cubic-bezier(.4, 0, .2, 1);--container:min(90%, 1200px);--header-height:7rem;--header-height-mobile:6rem}@media (prefers-reduced-motion:reduce){*,:before,:after{transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}</style><body>
+  <input type=checkbox id=menu-toggle class=sr-only aria-hidden=true>
+
+  <header class=navbar>
+    <div class=navbar__container>
+      <a href=/index.html#top class=navbar__brand aria-label="Retour à l'accueil">MB<span>.</span></a>
+
+      <label for=menu-toggle class=navbar__toggle aria-label="Ouvrir/fermer le menu" role=button tabindex=0>
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class=navbar__menu aria-label="Navigation principale">
+        <a href=/index.html#about class=navbar__link>À propos</a>
+        <a href=/index.html#experience class=navbar__link>Expérience</a>
+        <a href=/index.html#skills class=navbar__link>Compétences</a>
+        <a href=/index.html#projects class=navbar__link>Projets</a>
+        <a href=/formation.html class=navbar__link>Formation</a>
+        <a href=/index.html#contact class=navbar__link>Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id=top>
+    <section class=hero aria-labelledby=lesson-hero-title>
+      <div class=hero__bg aria-hidden=true></div>
+      <div class=hero__grid aria-hidden=true></div>
+
+      <div class=hero__content>
+        <div class=hero__intro>
+          <span class=hero__eyebrow>
+            <i class="fa fa-graduation-cap" aria-hidden=true></i>
+            Leçon 1.8 · Module 1 · VERROUILLÉ
+          </span>
+          <h1 id=lesson-hero-title class=hero__title>Comprendre le Cycle de Vie d'une Activity Android</h1>
+          <p class=hero__desc>Maîtriser les étapes du cycle de vie d'une Activity Android et savoir réagir aux changements d'état pour gérer correctement les ressources.</p>
+          <div class=hero__actions>
+            <a href=/formation.html class="btn btn--outline">
+              <i class="fa fa-arrow-left" aria-hidden=true></i> Toutes les leçons
+            </a>
+            <a href=/index.html#contact class="btn btn--primary"><i class="fa fa-envelope" aria-hidden=true></i> Demander l'accès</a>
+          </div>
+        </div>
+
+        <div class=hero__visual>
+          <div class=hero__card>
+            <div class=lesson-hero-meta>
+              <div class=lesson-hero-meta__item>
+                <i class="fa fa-clock-o" aria-hidden=true></i>
+                <div>
+                  <span class=lesson-hero-meta__label>Durée</span>
+                  <span class=lesson-hero-meta__value>25 min</span>
+                </div>
+              </div>
+              <div class=lesson-hero-meta__item>
+                <i class="fa fa-bookmark" aria-hidden=true></i>
+                <div>
+                  <span class=lesson-hero-meta__label>Module</span>
+                  <span class=lesson-hero-meta__value>1</span>
+                </div>
+              </div>
+              <div class=lesson-hero-meta__item>
+                <i class="fa fa-lock" aria-hidden=true></i>
+                <div>
+                  <span class=lesson-hero-meta__label>Accès</span>
+                  <span class=lesson-hero-meta__value>VERROUILLÉ</span>
+                </div>
+              </div>
+              <div class=lesson-hero-meta__item>
+                <i class="fa fa-graduation-cap" aria-hidden=true></i>
+                <div>
+                  <span class=lesson-hero-meta__label>Numéro</span>
+                  <span class=lesson-hero-meta__value>1.8</span>
+                </div>
+              </div>
+            </div>
+            <span class="hero__badge hero__badge--1">
+              <i class="fa fa-code" aria-hidden=true></i>
+              Kotlin
+            </span>
+            <span class="hero__badge hero__badge--2">
+              <i class="fa fa-android" aria-hidden=true></i>
+              Compose
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="lesson-content section-padding">
+      <div class=container>
+        
+        <div class=lesson-panels>
+      <section id=tab-theory class="is-active lesson-panel">
+        <div class=detail-block>
+          <h3 class=detail-block__title>Objectif</h3>
+          <p class=lesson-text>Maîtriser les étapes du cycle de vie d'une Activity Android et savoir réagir aux changements d'état pour gérer correctement les ressources.</p>
+        </div>
+        <div class=detail-block>
+          <h3 class=detail-block__title>Aperçu</h3>
+          <p class=lesson-text>Une Activity est un composant essentiel d'une application Android qui fournit une interface utilisateur à l'écran. Son cycle de vie est géré par le système d'exploitation et se compose d'un ensemble de méthodes de rappel (callbacks) auxquelles l'application peut se brancher pour…</p>
+        </div>
+        <div class=formation-access>
+          <span class=formation-access__icon aria-hidden=true>
+            <i class="fa fa-lock"></i>
+          </span>
+          <div class=formation-access__body>
+            <h3 class=formation-access__title>Contenu verrouillé</h3>
+            <p class=formation-access__text>Cette leçon fait partie du programme complet. Demande l'accès via le formulaire de contact pour débloquer la théorie, l'exercice, le quiz et les corrections.</p>
+            <div class=formation-access__actions>
+              <a href=/index.html#contact class="btn btn--primary">
+                <i class="fa fa-envelope" aria-hidden=true></i> Demander l'accès complet
+              </a>
+            </div>
+          </div>
+        </div>
+      </section></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class=footer>
+    <div class=container>
+      <div class=footer__social aria-label="Réseaux sociaux">
+        <a href=https://buymeacoffee.com/mbdioui target=_blank rel=noreferrer aria-label="Buy me a coffee"><i class="fa fa-coffee" aria-hidden=true></i></a>
+        <a href=https://www.linkedin.com/in/medsalahbdioui/ target=_blank rel=noreferrer aria-label=LinkedIn><i class="fa fa-linkedin" aria-hidden=true></i></a>
+        <a href=mailto:bdiouimedsalah@gmail.com aria-label=Email><i class="fa fa-envelope" aria-hidden=true></i></a>
+        <a href=https://github.com/mbdioui target=_blank rel=noreferrer aria-label=GitHub><i class="fa fa-github" aria-hidden=true></i></a>
+      </div>
+      <p class=footer__text>
+        © 2026 — Développé par <a href=https://github.com/mbdioui target=_blank rel=noreferrer>Mohamed BDIOUI</a>
+      </p>
+    </div>
+  </footer>
+
+  <script defer type=module src=/formation.67a45e1f.js></script>
+  <script defer type=module src=/lecon-1-1-us.b11c525b.js></script>
+
+
+
