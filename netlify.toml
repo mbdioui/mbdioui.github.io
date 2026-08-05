@@ -2,5 +2,5 @@
 # The site is already built and committed to the root of the repository.
 # No build command is needed; publish the root directory.
 [build]
-  command = "echo 'Site is prebuilt; skipping build step'"
+  command = "ls -la && echo 'Prebuild check: directory listed'"
   publish = ""
