@@ -1,0 +1,11 @@
+{
+  "name": "mbdioui.github.io",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.html",
+  "scripts": {
+    "build": "mkdir -p dist && rsync -a --exclude='/dist/' . dist/"
+  },
+  "author": "",
+  "license": "MIT"
+}

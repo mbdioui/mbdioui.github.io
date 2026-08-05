@@ -1,6 +1,5 @@
 # Netlify settings for the gh-pages (prebuilt) branch.
-# The site is already built and committed to the root of the repository.
-# No build command is needed; publish the root directory.
+# We run a build script that copies files to dist/ and publish from there.
 [build]
-  command = "ls -la && echo 'Prebuild check: directory listed'"
-  publish = "."
+  command = "npm run build"
+  publish = "dist"
