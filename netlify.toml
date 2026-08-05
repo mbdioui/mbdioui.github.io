@@ -3,4 +3,4 @@
 # No build command is needed; publish the root directory.
 [build]
   command = "echo 'Site is prebuilt; skipping build step'"
-  publish = "."
+  publish = ""
