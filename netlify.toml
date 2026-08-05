@@ -3,4 +3,4 @@
 # No build command is needed; publish the root directory.
 [build]
   command = "ls -la && echo 'Prebuild check: directory listed'"
-  publish = ""
+  publish = "."
